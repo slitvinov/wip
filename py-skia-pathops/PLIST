@@ -1,0 +1,16 @@
+@comment $NetBSD$
+${PYSITELIB}/pathops/__init__.py
+${PYSITELIB}/pathops/__init__.pyc
+${PYSITELIB}/pathops/__init__.pyo
+${PYSITELIB}/pathops/_pathops.abi3.so
+${PYSITELIB}/pathops/_version.py
+${PYSITELIB}/pathops/_version.pyc
+${PYSITELIB}/pathops/_version.pyo
+${PYSITELIB}/pathops/operations.py
+${PYSITELIB}/pathops/operations.pyc
+${PYSITELIB}/pathops/operations.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

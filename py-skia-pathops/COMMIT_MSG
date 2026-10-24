@@ -1,0 +1,7 @@
+wip/py-skia-pathops: Import py-skia-pathops-0.9.2
+
+skia-pathops: Python bindings to Skia's path operations (union,
+intersection, difference, xor, simplify).  The sdist bundles the Skia
+sources; a minimal static libskia is built with gn (wip/gn-git) and
+ninja instead of the downloaded virtualenv/ninja/gn of setup.py.
+Needed by ManimGL's boolean operations (wip/py-manimgl).

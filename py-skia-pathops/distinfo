@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (skia_pathops-0.9.2.tar.gz) = 59009c4a900c1ca6ad2cea7b9ee3356ded64006bce73ade061f60e70fa057615
+SHA512 (skia_pathops-0.9.2.tar.gz) = 808d8cf000798eebb77c8bd2ef67a694e0d68b85b7765da9df66021fbc786232fddf5c1cc06695d0617824cc57b2346656968c8d489323cf99ae9f840896fffa
+Size (skia_pathops-0.9.2.tar.gz) = 65115346 bytes
+SHA1 (patch-setup.py) = c20f597362ef8678d6c94cc9a7f152a5621c8c5f

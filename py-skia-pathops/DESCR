@@ -1,0 +1,5 @@
+skia-pathops is a Python binding to the path operations (PathOps) of
+the Skia graphics library: union, intersection, difference and
+exclusive-or of paths, simplification of self-intersecting paths and
+removal of overlaps, as used by font tools such as fontmake and ufo2ft.
+A minimal static Skia is built from the sources bundled in the sdist.
