@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (rubicon_objc-0.5.7.tar.gz) = e7edbdcaa8d922b94e342b115732a0e38d1086a25cf0228cedb364ecbedc9141
+SHA512 (rubicon_objc-0.5.7.tar.gz) = e7913b79f405e1d0e975fa3c51a048fdae1eeeead1b7cc02de0d696a99fb0a68064a3157715a4221a6bd7d20198e8072f02bcc8cb87b37d1e964175b95fa1d37
+Size (rubicon_objc-0.5.7.tar.gz) = 197088 bytes

@@ -1,0 +1,5 @@
+Rubicon Objective-C is a bridge between Objective-C and Python.  It lets
+Python code use Objective-C classes and objects as if they were Python
+ones (calling methods, accessing properties, subclassing, defining
+protocols and blocks) through ctypes and the Objective-C runtime, with
+no compiled extension.

@@ -1,0 +1,5 @@
+wip/py-rubicon-objc: Import py-rubicon-objc-0.5.7
+
+Rubicon Objective-C: a ctypes bridge between Python and Objective-C.
+wgpu-py (wip/py-wgpu) needs it on macOS to hand a CAMetalLayer to
+wgpu-native when presenting to a window.

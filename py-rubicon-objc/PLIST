@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/rubicon/objc/__init__.py
+${PYSITELIB}/rubicon/objc/__init__.pyc
+${PYSITELIB}/rubicon/objc/__init__.pyo
+${PYSITELIB}/rubicon/objc/api.py
+${PYSITELIB}/rubicon/objc/api.pyc
+${PYSITELIB}/rubicon/objc/api.pyo
+${PYSITELIB}/rubicon/objc/collections.py
+${PYSITELIB}/rubicon/objc/collections.pyc
+${PYSITELIB}/rubicon/objc/collections.pyo
+${PYSITELIB}/rubicon/objc/ctypes_patch.py
+${PYSITELIB}/rubicon/objc/ctypes_patch.pyc
+${PYSITELIB}/rubicon/objc/ctypes_patch.pyo
+${PYSITELIB}/rubicon/objc/eventloop.py
+${PYSITELIB}/rubicon/objc/eventloop.pyc
+${PYSITELIB}/rubicon/objc/eventloop.pyo
+${PYSITELIB}/rubicon/objc/runtime.py
+${PYSITELIB}/rubicon/objc/runtime.pyc
+${PYSITELIB}/rubicon/objc/runtime.pyo
+${PYSITELIB}/rubicon/objc/types.py
+${PYSITELIB}/rubicon/objc/types.pyc
+${PYSITELIB}/rubicon/objc/types.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
