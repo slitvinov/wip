@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (openvkl-2.0.2.tar.gz) = 2e73e148391be5f59f5cb730ff8bdd225e0219c8f89de7b6e2e75ec0baaea188
+SHA512 (openvkl-2.0.2.tar.gz) = b3069c511b7ff1f9ebb23098a816d6b1250967ff266c41a38a338c563161be33b1e8912ba051d75733a6eef999ec31245f1e310b516ad70b997f6435f02b7971
+Size (openvkl-2.0.2.tar.gz) = 3077978 bytes

@@ -1,0 +1,11 @@
+wip/openvkl: Import openvkl-2.0.2
+
+Intel Open Volume Kernel Library: volume sampling and iteration
+kernels (structured, unstructured, AMR, particle, VDB) used by OSPRay.
+2.0.2 needs ISPC 1.30 and rkcommon 1.15.2.
+
+The CPU device is built for the NEON2X (neon-i32x8) ISPC target on
+aarch64, to pair with Embree's NEON2X build; only one NEON width can be
+enabled.  The SYCL GPU device (Intel GPUs only) is off.  The examples
+(vklTutorialCPU, vklTutorialISPC, vklMinimal_*, vklExamplesCPU with
+GLFW/ImGui) are installed; the tests and benchmarks are not.

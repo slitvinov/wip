@@ -1,0 +1,6 @@
+Intel Open Volume Kernel Library (Open VKL) is a collection of
+high-performance volume computation kernels for rendering and
+simulation.  It provides sampling, gradients, interval iteration and
+hit iteration on structured (regular and spherical), unstructured,
+AMR, particle and VDB volumes, with C and ISPC APIs.  It is used by
+OSPRay for volume rendering.
