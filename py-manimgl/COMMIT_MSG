@@ -1,0 +1,9 @@
+wip/py-manimgl: Import py-manimgl-1.7.2.20260909
+
+ManimGL, the 3Blue1Brown animation engine for explanatory math videos,
+with the manimgl command (manimgl-3.13).  Master snapshot fafa083
+(2026-09-09): the last release, 1.7.2 (2024-12), still renders with
+moderngl, while master renders with wgpu (Metal on macOS).
+
+Uses pkgsrc's ffmpeg7 to write videos and TeX Live + dvisvgm for Tex;
+depends on the LaTeX packages its default template loads.

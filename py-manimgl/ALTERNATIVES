@@ -1,0 +1,2 @@
+bin/manimgl @PREFIX@/bin/manimgl-@PYVERSSUFFIX@
+bin/manim-render @PREFIX@/bin/manim-render-@PYVERSSUFFIX@

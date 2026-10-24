@@ -1,0 +1,6 @@
+ManimGL is the animation engine Grant Sanderson (3Blue1Brown) uses for
+his explanatory math videos.  Scenes are Python classes that create
+mathematical objects (shapes, graphs, LaTeX formulas, Pango text, 3D
+surfaces) and animate them; manimgl previews a scene interactively in a
+window or writes it to a video file.  This version renders with WebGPU
+(wgpu-py and wgpu-native: Metal on macOS, Vulkan elsewhere).
