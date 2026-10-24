@@ -1,0 +1,10 @@
+wip/py-build123d: Import py-build123d-0.13.0
+
+build123d is a Python parametric BREP CAD library built on OpenCascade
+through OCP (wip/py-cadquery-ocp-novtk, OCCT 8.0.1 from wip/occt).
+0.13.0 is the latest release (2026-09-21) and the first that uses
+cadquery-ocp 8.0.
+
+The webcolors~=24.8.0 pin is relaxed to www/py-webcolors 25.10.0 (no
+API change), and the cadquery-ocp-proxy metapackage is replaced by a
+direct dependency on the OCP bindings.

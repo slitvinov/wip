@@ -1,0 +1,6 @@
+build123d is a Python parametric boundary representation (BREP) CAD
+modeling framework for 2D and 3D CAD, built on the OpenCascade
+geometric kernel (through the OCP bindings).  Models are written as
+Python code in a builder style (BuildPart, BuildSketch, BuildLine
+context managers) or an algebra style, and can be imported from and
+exported to STEP, STL, 3MF, glTF, BREP, DXF and SVG.

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (build123d-0.13.0.tar.gz) = bff77ee41c46d41c7347ae07c559882e1570487ebe7ebc841de8ff61e1dab471
+SHA512 (build123d-0.13.0.tar.gz) = 0667eacf69bfaa058ca2525a532f3ddbc97e375f857c5ac5c03513c4f3aacb08a24e0e03dca42de88823d859620d5124f584366401d136b00d149ffcf91994fe
+Size (build123d-0.13.0.tar.gz) = 22965578 bytes
