@@ -6,11 +6,16 @@ PKG_SUGGESTED_OPTIONS=	opengl
 PLIST_VARS+=		opengl doc # ptex has no extra PLIST entries
 
 .include 		"../../mk/bsd.options.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKG_OPTIONS:Mopengl)
+.  if ${OPSYS} != "Darwin"
+# Darwin uses the native OpenGL framework.
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=	-DGLEW_LOCATION:PATH=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DNO_GLEW:BOOL=OFF
+.  endif
 PLIST.opengl=	yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DNO_OPENGL:BOOL=ON

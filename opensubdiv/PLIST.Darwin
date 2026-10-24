@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/opensubdiv/osd/mtlCommon.h
+include/opensubdiv/osd/mtlComputeEvaluator.h
+include/opensubdiv/osd/mtlLegacyGregoryPatchTable.h
+include/opensubdiv/osd/mtlMesh.h
+include/opensubdiv/osd/mtlPatchShaderSource.h
+include/opensubdiv/osd/mtlPatchTable.h
+include/opensubdiv/osd/mtlVertexBuffer.h
