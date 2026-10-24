@@ -1,0 +1,19 @@
+wip/occt: update to 8.0.1
+
+OCCT 8.0 moves the sources under src/<Module>/<Toolkit>/ and adds
+toolkits such as TKHelix; see
+https://github.com/Open-Cascade-SAS/OCCT/releases/tag/V8_0_1.
+cadquery-ocp 8.0.x (wip/py-cadquery-ocp-novtk, needed by build123d)
+is generated against 8.0.1.
+
+- Regenerate the two NetBSD/SunOS patches for the new source paths.
+- Build with -DBUILD_RELEASE_DISABLE_EXCEPTIONS=OFF, like upstream OCP,
+  so release builds keep the checks that raise Standard_Failure
+  (Python bindings turn them into exceptions instead of crashes).
+- buildlink3.mk: use PKG_BUILD_OPTIONS.occt instead of PKG_OPTIONS,
+  append to BUILDLINK_ABI_DEPENDS and require occt>=8.0.1.
+- PLIST regenerated on Darwin and written in the portable lib*.so
+  form with ${MINOR_VERSION}/${PKGVERSION} and
+  ${OCCT_CUSTOM_COMPILER_DRIVER} substitutions (old TODO items).
+
+Tested on macOS 26 arm64 (Draw on, x11 off).

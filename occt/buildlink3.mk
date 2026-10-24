@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	occt
 OCCT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.occt+=	occt>=7.7.0
-BUILDLINK_ABI_DEPENDS.occt?=	occt>=7.7.0nb1
+BUILDLINK_ABI_DEPENDS.occt+=	occt>=8.0.1
 BUILDLINK_PKGSRCDIR.occt?=	../../wip/occt
 
 BUILDLINK_INCDIRS.occt+=	include/opencascade
@@ -15,13 +15,13 @@ CMAKE_CONFIGURE_ARGS+=		-DOCC_INCLUDE_DIR=${BUILDLINK_PREFIX.occt}/include/openc
 pkgbase := occt
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_OPTIONS:Mx11)
+.if ${PKG_BUILD_OPTIONS.occt:Mx11}
 .include "../../graphics/freeimage/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mocct-draw)
+.if ${PKG_BUILD_OPTIONS.occt:Mocct-draw}
 #PLIST_SRC+=	${PKGDIR}/PLIST.draw
 .  include "../../lang/tcl/buildlink3.mk"
 .  include "../../x11/tk/buildlink3.mk"

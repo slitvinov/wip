@@ -2,8 +2,8 @@ $NetBSD$
 
 NetBSD support
 
---- src/Standard/Standard_CString.cxx.orig	2025-10-23 17:45:40.329550460 +0000
-+++ src/Standard/Standard_CString.cxx
+--- src/FoundationClasses/TKernel/Standard/Standard_CString.cxx.orig	2026-10-24 09:37:03
++++ src/FoundationClasses/TKernel/Standard/Standard_CString.cxx
 @@ -51,7 +51,7 @@
      // glibc version for android platform use locale-independent implementation of
      // strtod, strtol, strtoll functions. For other system with locale-depended

@@ -2,8 +2,8 @@ $NetBSD$
 
 NetBSD support
 
---- src/OSD/OSD_Path.cxx.orig	2025-10-23 17:43:10.362476981 +0000
-+++ src/OSD/OSD_Path.cxx
+--- src/FoundationClasses/TKernel/OSD/OSD_Path.cxx.orig	2026-10-24 09:37:02
++++ src/FoundationClasses/TKernel/OSD/OSD_Path.cxx
 @@ -19,7 +19,7 @@
  static OSD_SysType whereAmI()
  {

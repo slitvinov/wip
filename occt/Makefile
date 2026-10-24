@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.8 2025/08/14 12:48:16 gdt Exp $
 
-VERSION=	7.9.2
-VERSION_GH=	7_9_2
+VERSION=	8.0.1
+VERSION_GH=	8_0_1
 # Name the distfile to match the unpack directory.
 DISTNAME=	OCCT-${VERSION_GH}
 PKGNAME=	occt-${VERSION}
@@ -27,6 +27,12 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_FREETYPE=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_EIGEN=ON
 CMAKE_CONFIGURE_ARGS+=	-DUSE_RAPIDJSON=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_DOC_Overview=OFF
+# Keep the run-time range and null checks that raise Standard_Failure
+# subclasses in release builds (the default ON compiles them out).  The
+# Python bindings (wip/py-cadquery-ocp-novtk) rely on them to turn OCCT
+# errors into Python exceptions instead of crashes; upstream OCP builds
+# OCCT the same way.
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_RELEASE_DISABLE_EXCEPTIONS=OFF
 
 REPLACE_BASH+=	adm/templates/draw.sh
 
