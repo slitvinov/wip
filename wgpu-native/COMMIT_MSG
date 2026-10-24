@@ -1,0 +1,8 @@
+wip/wgpu-native: Import wgpu-native-29.0.1.1
+
+wgpu-native: native WebGPU implementation (C API: webgpu.h, wgpu.h) on
+top of wgpu-core, with Metal, Vulkan, DX12 and GLES backends.  Built
+from source with cargo (crates vendored through cargo-depends.mk);
+installs libwgpu_native and the headers like the upstream release
+archives, with the version that wgpu-py checks compiled in.
+29.0.1.1 is the version wgpu-py 0.32.0 (wip/py-wgpu) targets.

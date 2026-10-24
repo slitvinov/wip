@@ -1,0 +1,5 @@
+wgpu-native is a native implementation of the WebGPU API with a C
+interface (webgpu.h plus the wgpu.h extensions), built on the wgpu-core
+Rust crates of the wgpu project.  It runs on Metal (macOS, iOS), Vulkan,
+DirectX 12 and OpenGL ES, and accepts shaders in WGSL, SPIR-V and GLSL.
+It is the backend used by wgpu-py and other language bindings.

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/webgpu/webgpu.h
+include/webgpu/wgpu.h
+lib/${WGPU_LIB}
+share/doc/wgpu-native/README.md
