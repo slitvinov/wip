@@ -1,0 +1,5 @@
+wip/py-trianglesolver: Import py-trianglesolver-1.2
+
+trianglesolver solves a triangle from three known sides and/or angles
+with the laws of sines and cosines.  Needed by build123d
+(wip/py-build123d).
