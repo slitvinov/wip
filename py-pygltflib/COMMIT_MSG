@@ -1,0 +1,4 @@
+wip/py-pygltflib: Import py-pygltflib-1.16.5
+
+pygltflib reads and writes glTF 2.0 files.  Needed by threejs-materials
+(wip/py-threejs-materials).

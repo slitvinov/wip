@@ -1,0 +1,4 @@
+pygltflib is a Python library for reading, writing and handling glTF
+2.0 files (.gltf and binary .glb).  It maps the glTF JSON schema to
+Python dataclasses and converts buffers between embedded data URIs,
+external files and binary blobs.

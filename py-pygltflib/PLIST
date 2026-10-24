@@ -1,0 +1,15 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pygltflib/__init__.py
+${PYSITELIB}/pygltflib/__init__.pyc
+${PYSITELIB}/pygltflib/__init__.pyo
+${PYSITELIB}/pygltflib/utils.py
+${PYSITELIB}/pygltflib/utils.pyc
+${PYSITELIB}/pygltflib/utils.pyo
+${PYSITELIB}/pygltflib/validator.py
+${PYSITELIB}/pygltflib/validator.pyc
+${PYSITELIB}/pygltflib/validator.pyo
