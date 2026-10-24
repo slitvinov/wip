@@ -1,0 +1,4 @@
+wip/py-svgwrite: Import py-svgwrite-1.4.3
+
+svgwrite creates SVG drawings from Python objects.  Needed by
+svgpathtools (wip/py-svgpathtools).

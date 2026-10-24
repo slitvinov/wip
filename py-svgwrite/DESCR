@@ -1,0 +1,4 @@
+svgwrite is a Python library to create SVG drawings.  It builds the
+SVG document as a tree of Python objects (shapes, paths, text, groups,
+gradients, filters) and writes it out as XML.  It only writes SVG; it
+does not parse or render it.
