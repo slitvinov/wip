@@ -1,0 +1,6 @@
+wip/py-manimpango: Import py-manimpango-0.7.1
+
+ManimPango: Cython bindings to Pango/Cairo that Manim uses to turn text
+and Pango markup into SVG glyph outlines.  Built against pkgsrc's
+pango, cairo, harfbuzz and fontconfig.  Needed by ManimGL (Text,
+MarkupText; wip/py-manimgl).

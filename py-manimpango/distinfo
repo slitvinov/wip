@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (manimpango-0.7.1.tar.gz) = 634c17bc524fc09d7d4abb0bdbb868b730b7ffe1a808240907b05ec8101207b2
+SHA512 (manimpango-0.7.1.tar.gz) = 4bf19a7ded68363715ce0183f384cd151200b32ff0c63c68f90b92621819864a4f6970cac0d06033e50e21acd916b923e9e5fa5ecfc7fa67a9437b95c601c9d8
+Size (manimpango-0.7.1.tar.gz) = 4081504 bytes

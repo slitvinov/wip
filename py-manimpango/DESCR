@@ -1,0 +1,5 @@
+ManimPango is a set of Cython bindings to Pango (with Cairo and
+fontconfig) used by Manim to render text: it lays out a string or Pango
+markup with a given font, size, weight, slant and line spacing and
+writes the glyph outlines to an SVG file, and registers extra font files
+for the current process.
