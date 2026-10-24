@@ -1,0 +1,17 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/glfw/GLFW.py
+${PYSITELIB}/glfw/GLFW.pyc
+${PYSITELIB}/glfw/GLFW.pyo
+${PYSITELIB}/glfw/__init__.py
+${PYSITELIB}/glfw/__init__.pyc
+${PYSITELIB}/glfw/__init__.pyi
+${PYSITELIB}/glfw/__init__.pyo
+${PYSITELIB}/glfw/library.py
+${PYSITELIB}/glfw/library.pyc
+${PYSITELIB}/glfw/library.pyo
+${PYSITELIB}/glfw/py.typed

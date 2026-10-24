@@ -1,0 +1,4 @@
+pyGLFW is a ctypes-based Python wrapper for GLFW 3, the library for
+creating windows with OpenGL or Vulkan contexts and surfaces and for
+receiving input and events.  It mirrors the C API closely, with Python
+naming, and adds conveniences such as error handling through exceptions.

@@ -1,0 +1,6 @@
+wip/py-glfw: Import py-glfw-2.11.0
+
+pyGLFW: ctypes bindings for GLFW 3.  Loads pkgsrc's graphics/glfw
+library by default (PYGLFW_LIBRARY still overrides it) instead of
+searching sys.prefix, /usr and Homebrew paths.  Needed by rendercanvas
+and ManimGL's preview window (wip/py-manimgl).

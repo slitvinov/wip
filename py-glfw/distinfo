@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (glfw-2.11.0.tar.gz) = 66504a809cb3adf4bb4cf7dae2556362a8c7a42ecae71f5179f0cfcbf940593a
+SHA512 (glfw-2.11.0.tar.gz) = dc86ecfb51ef9265d91aea21a8555a7c786dca453b10b221599ffdc34533176286cb673803fd8b1b8a0556a42399ad08d68df07001b702571b4fa97c7b60b37a
+Size (glfw-2.11.0.tar.gz) = 36404 bytes
+SHA1 (patch-glfw_library.py) = f2ff301789b958da2388b7477bc6771147c346db
