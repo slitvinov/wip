@@ -1,0 +1,4 @@
+PyWavefront reads Wavefront 3D object files (.obj and .mtl) and
+generates interleaved vertex data for each material, ready for
+rendering.  It supports faces, normals, texture coordinates, vertex
+colors and materials, with an optional binary cache for fast reloads.

@@ -1,0 +1,5 @@
+wip/py-pywavefront: Import py-pywavefront-1.3.3
+
+PyWavefront reads Wavefront .obj/.mtl files into per-material vertex
+data.  Fetched from GitHub: PyPI has no sdist for 1.3.3.  Needed by
+ManimGL (TexturedMesh materials, wip/py-manimgl).
