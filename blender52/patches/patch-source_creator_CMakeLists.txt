@@ -1,0 +1,17 @@
+$NetBSD$
+
+Honor WITH_PYTHON_INSTALL=OFF on macOS: do not copy the system Python
+into the application bundle.
+
+--- source/creator/CMakeLists.txt.orig
++++ source/creator/CMakeLists.txt
+@@ -1786,7 +1786,8 @@
+   endif()
+ 
+   # Python.
+-  if(WITH_PYTHON AND NOT WITH_PYTHON_MODULE AND NOT WITH_PYTHON_FRAMEWORK)
++  # pkgsrc: honor WITH_PYTHON_INSTALL=OFF to use the system Python.
++  if(WITH_PYTHON AND WITH_PYTHON_INSTALL AND NOT WITH_PYTHON_MODULE AND NOT WITH_PYTHON_FRAMEWORK)
+     # Copy the python libraries into the install directory.
+     install_dir(
+       ${PYTHON_LIBPATH}/python${PYTHON_VERSION}

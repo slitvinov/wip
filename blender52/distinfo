@@ -1,0 +1,10 @@
+$NetBSD$
+
+BLAKE2s (blender-5.2.2.tar.xz) = aead31a59178dab7c973332796b55bd0b82cf913648af318a3e2ade66075ab05
+SHA512 (blender-5.2.2.tar.xz) = 54ce15eadcd6e3b3b60c5deda046ade2f8c519167127b41cad541d762e0aa85350f2589af5f0c86003a05613720fab7148c8448b8057a1ad6daed9a00c7c45f2
+Size (blender-5.2.2.tar.xz) = 93671672 bytes
+SHA1 (patch-build__files_cmake_platform_platform__apple.cmake) = e9dc67e71b7c2197fda90b72912fd0ac494200c5
+SHA1 (patch-build__files_cmake_platform_platform__unix.cmake) = 8e3d04b1147e22bf074615ab8c235cb1b084557e
+SHA1 (patch-intern_dualcon_intern_octree.cpp) = 72d3dd80b9c1392669bd09f54705f0287bce3140
+SHA1 (patch-source_blender_python_intern_bpy__interface.cc) = 15e219408ec13347fecc919b3bfa08a8d9f55572
+SHA1 (patch-source_creator_CMakeLists.txt) = 379285dd62ec368adb2cf6ef12c26d310a20b5cf
