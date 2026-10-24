@@ -1,0 +1,3 @@
+ocpsvg converts between SVG and OpenCascade geometry through the OCP
+Python bindings: it imports SVG paths and shapes as OCCT edges, wires
+and faces, and exports OCCT curves back to SVG path data.

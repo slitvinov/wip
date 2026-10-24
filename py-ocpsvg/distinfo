@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ocpsvg-0.7.0.tar.gz) = 0fb9d4644be92191d1ac0624b1103c5d71a199f1933b5fa004a346d79beaefa1
+SHA512 (ocpsvg-0.7.0.tar.gz) = d15e131c647e8885e8305ec2941e36bab18c20146784e4728e22ff7ba9fd0c3d6c94cf18e03409d153fbcecbc66e22d438d96a4736d235ba60862b56d8ff234c
+Size (ocpsvg-0.7.0.tar.gz) = 54507 bytes

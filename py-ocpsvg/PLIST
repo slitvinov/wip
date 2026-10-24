@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/ocpsvg/__init__.py
+${PYSITELIB}/ocpsvg/__init__.pyc
+${PYSITELIB}/ocpsvg/__init__.pyo
+${PYSITELIB}/ocpsvg/hlr.py
+${PYSITELIB}/ocpsvg/hlr.pyc
+${PYSITELIB}/ocpsvg/hlr.pyo
+${PYSITELIB}/ocpsvg/ocp.py
+${PYSITELIB}/ocpsvg/ocp.pyc
+${PYSITELIB}/ocpsvg/ocp.pyo
+${PYSITELIB}/ocpsvg/svg.py
+${PYSITELIB}/ocpsvg/svg.pyc
+${PYSITELIB}/ocpsvg/svg.pyo

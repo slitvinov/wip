@@ -1,0 +1,4 @@
+wip/py-ocpsvg: Import py-ocpsvg-0.7.0
+
+ocpsvg converts SVG to OpenCascade (OCP) edges, wires and faces and
+back.  Needed by build123d (wip/py-build123d) for SVG import/export.
