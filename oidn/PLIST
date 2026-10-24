@@ -1,0 +1,20 @@
+@comment $NetBSD$
+include/OpenImageDenoise/config.h
+include/OpenImageDenoise/oidn.h
+include/OpenImageDenoise/oidn.hpp
+lib/cmake/OpenImageDenoise-${PKGVERSION}/OpenImageDenoiseConfig.cmake
+lib/cmake/OpenImageDenoise-${PKGVERSION}/OpenImageDenoiseConfigVersion.cmake
+lib/cmake/OpenImageDenoise-${PKGVERSION}/OpenImageDenoiseTargets-release.cmake
+lib/cmake/OpenImageDenoise-${PKGVERSION}/OpenImageDenoiseTargets.cmake
+lib/libOpenImageDenoise.so
+lib/libOpenImageDenoise.so.${PKGVERSION}
+lib/libOpenImageDenoise.so.2
+lib/libOpenImageDenoise_core.so.${PKGVERSION}
+lib/libOpenImageDenoise_device_cpu.so.${PKGVERSION}
+share/doc/OpenImageDenoise/CHANGELOG.md
+share/doc/OpenImageDenoise/LICENSE.txt
+share/doc/OpenImageDenoise/README.md
+share/doc/OpenImageDenoise/readme.pdf
+share/doc/OpenImageDenoise/third-party-programs-DPCPP.txt
+share/doc/OpenImageDenoise/third-party-programs-oneTBB.txt
+share/doc/OpenImageDenoise/third-party-programs.txt

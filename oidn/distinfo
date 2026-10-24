@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (oidn-2.5.0.src.tar.gz) = 65f5a2e506c6682dc86cdceb02f344a51a5c319aa8560c31fbb164de38a1809c
+SHA512 (oidn-2.5.0.src.tar.gz) = 9015cf1335086062bf3b0440e6b764757cd1b66b73f891b27466fc35430d2dc3af4cfd96d53afcffcbdfd3fa4fecc0bcda611a3befb5557a956c6a8c54ffe1b0
+Size (oidn-2.5.0.src.tar.gz) = 89051069 bytes

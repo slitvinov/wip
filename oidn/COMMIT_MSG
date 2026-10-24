@@ -1,0 +1,5 @@
+graphics/oidn: Add oidn version 2.5.0
+
+Intel Open Image Denoise is an open source library of high-performance,
+high-quality denoising filters for images rendered with ray tracing.
+It is used by Blender's Cycles renderer and other path tracers.
