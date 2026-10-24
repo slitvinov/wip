@@ -1,0 +1,2 @@
+@comment $NetBSD$
+${PYSITELIB}/mitsuba/metal_ad_rgb.so

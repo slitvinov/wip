@@ -1,0 +1,11 @@
+wip/py-mitsuba: Import py-mitsuba-3.9.1
+
+Mitsuba 3 is a retargetable forward and inverse (differentiable)
+renderer built on Dr.Jit (wip/py-drjit). Variants: scalar_rgb,
+scalar_spectral, llvm_ad_rgb, llvm_ad_spectral and, on macOS,
+metal_ad_rgb.
+
+Uses pkgsrc's zlib, OpenEXR 3, libpng, libjpeg, pugixml and fast_float
+instead of the bundled submodules. CPU ray tracing uses the bundled
+Embree 3.13 fork: Mitsuba needs the Embree 3 API (wip/embree is 4.x)
+and its built-in kernel misses geometry on the bounding box boundary.

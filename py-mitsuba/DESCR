@@ -1,0 +1,11 @@
+Mitsuba 3 is a research-oriented rendering system for forward and
+inverse light transport simulation. It consists of a small set of core
+libraries and a wide variety of plugins that implement functionality
+ranging from materials and light sources to complete rendering
+algorithms. It is retargetable: the same code can be compiled into
+scalar (one ray at a time), vectorized JIT (LLVM on the CPU, Metal on
+Apple GPUs) and differentiable variants, built on the Dr.Jit compiler.
+
+This package provides the Python module and the mitsuba command-line
+renderer with the scalar_rgb, scalar_spectral, llvm_ad_rgb and
+llvm_ad_spectral variants, plus metal_ad_rgb on macOS.

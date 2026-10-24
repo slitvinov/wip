@@ -1,0 +1,16 @@
+$NetBSD$
+
+scikit-build: use the bundled ext/nanobind (the exact version Dr.Jit and
+Mitsuba were released with) instead of "python -m nanobind".
+
+--- ext/drjit/ext/drjit-core/ext/nanothread/ext/cmake-defaults/CMakeLists.txt.orig	2026-10-24 00:46:49
++++ ext/drjit/ext/drjit-core/ext/nanothread/ext/cmake-defaults/CMakeLists.txt	2026-10-24 00:47:01
+@@ -265,7 +265,7 @@
+       REQUIRED COMPONENTS Interpreter ${PYTHON_DEV_MODULE}
+       OPTIONAL_COMPONENTS Development.SABIModule)
+ 
+-    if (SKBUILD)
++    if (SKBUILD AND NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ext/nanobind/CMakeLists.txt")
+       execute_process(
+         COMMAND "${Python_EXECUTABLE}" -m nanobind --cmake_dir
+         OUTPUT_VARIABLE NB_DIR

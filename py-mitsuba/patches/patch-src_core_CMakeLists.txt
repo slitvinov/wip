@@ -1,0 +1,27 @@
+$NetBSD$
+
+Link the system OpenEXR, pugixml and fast_float (see ext/CMakeLists.txt).
+
+--- src/core/CMakeLists.txt.orig	2026-10-24 00:46:48
++++ src/core/CMakeLists.txt	2026-10-24 00:47:01
+@@ -79,9 +79,9 @@
+   ${ZLIB_LIBRARY}
+   nanothread
+   # Link pugixml parser
+-  pugixml
++  pugixml::pugixml
+   # Image libraries: link to libjpeg, libpng, OpenEXR
+-  ${PNG_LIBRARIES} ${JPEG_LIBRARIES} IlmImf
++  ${PNG_LIBRARIES} ${JPEG_LIBRARIES} OpenEXR::OpenEXR
+ )
+ 
+ target_link_libraries(mitsuba-core PUBLIC struct-jit)
+@@ -91,7 +91,7 @@
+ endif()
+ 
+ target_link_libraries(mitsuba-core PUBLIC drjit)
+-target_link_libraries(mitsuba-core PRIVATE fast_float)
++target_link_libraries(mitsuba-core PRIVATE FastFloat::fast_float)
+ 
+ if (MI_ENABLE_JIT)
+   target_link_libraries(mitsuba-core PUBLIC drjit-core)
