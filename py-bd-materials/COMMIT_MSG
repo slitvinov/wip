@@ -1,0 +1,4 @@
+wip/py-bd-materials: Import py-bd-materials-0.2.5
+
+bd_materials provides engineering materials, finishes and PBR looks
+for build123d.  Needed by build123d (wip/py-build123d).

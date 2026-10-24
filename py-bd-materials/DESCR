@@ -1,0 +1,3 @@
+bd_materials provides typical-value engineering materials (density,
+elastic modulus, strength, thermal properties) for build123d, with
+surface finishes and three.js PBR looks for rendering.
