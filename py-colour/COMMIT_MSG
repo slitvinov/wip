@@ -1,0 +1,6 @@
+wip/py-colour: Import py-colour-0.1.5
+
+colour converts and manipulates color representations (RGB, HSL, hex,
+X11 names).  textproc/py-colour was removed from pkgsrc in 2023; ManimGL
+(wip/py-manimgl) needs it.  The obsolete d2to1 setup is replaced with
+plain setuptools.
