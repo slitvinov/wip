@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (rendercanvas-2.7.2.tar.gz) = 9b120329e72679c24319a9fa9a84ea691711985e451a7c3270799b7cf9074119
+SHA512 (rendercanvas-2.7.2.tar.gz) = 737cb56fc1be8cfdb4b5858077eae22e508079fd8e67b82f2888a951e8a852d51501f086cbd6617a5d06883ee2b826086fcc54b62aeed1dc0b9069692cb811ab
+Size (rendercanvas-2.7.2.tar.gz) = 117944 bytes

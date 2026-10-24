@@ -1,0 +1,6 @@
+wip/py-rendercanvas: Import py-rendercanvas-2.7.2
+
+rendercanvas: one canvas API with multiple GUI backends (glfw, Qt,
+Jupyter, offscreen) for wgpu rendering.  Depends on wip/py-glfw for the
+glfw backend that ManimGL's preview window uses.  Needed by wgpu-py
+(wip/py-wgpu) and ManimGL (wip/py-manimgl).

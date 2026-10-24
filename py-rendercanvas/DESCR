@@ -1,0 +1,5 @@
+rendercanvas provides one canvas API with multiple backends (glfw, Qt,
+wx, Jupyter, offscreen, terminal) for applications that render with
+wgpu (WebGPU) or bitmaps.  It handles the window, the event loop and the
+scheduling of draws, so the same rendering code runs on screen, in a
+notebook or headless.
