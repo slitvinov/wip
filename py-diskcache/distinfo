@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (diskcache-5.6.3.tar.gz) = 188d925aae6bd56731727995f8ae564d8885a78692d2bb6071840ec02195cebc
+SHA512 (diskcache-5.6.3.tar.gz) = 2b6c30f25656c05e69ce3550a808ecb4f4e9727b7709b0eac770ae6414fd03a12bd8b37424dac762663ccf532c2cc94b565b01e7ab9714a996dad47f0ff79602
+Size (diskcache-5.6.3.tar.gz) = 67916 bytes

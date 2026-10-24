@@ -1,0 +1,4 @@
+DiskCache is an Apache2 licensed disk and file backed cache library,
+written in pure Python and compatible with Django.  It stores values in
+SQLite and the file system and provides Cache, FanoutCache, Deque and
+Index types, plus memoizing decorators.

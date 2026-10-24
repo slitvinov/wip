@@ -1,0 +1,27 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/diskcache/__init__.py
+${PYSITELIB}/diskcache/__init__.pyc
+${PYSITELIB}/diskcache/__init__.pyo
+${PYSITELIB}/diskcache/cli.py
+${PYSITELIB}/diskcache/cli.pyc
+${PYSITELIB}/diskcache/cli.pyo
+${PYSITELIB}/diskcache/core.py
+${PYSITELIB}/diskcache/core.pyc
+${PYSITELIB}/diskcache/core.pyo
+${PYSITELIB}/diskcache/djangocache.py
+${PYSITELIB}/diskcache/djangocache.pyc
+${PYSITELIB}/diskcache/djangocache.pyo
+${PYSITELIB}/diskcache/fanout.py
+${PYSITELIB}/diskcache/fanout.pyc
+${PYSITELIB}/diskcache/fanout.pyo
+${PYSITELIB}/diskcache/persistent.py
+${PYSITELIB}/diskcache/persistent.pyc
+${PYSITELIB}/diskcache/persistent.pyo
+${PYSITELIB}/diskcache/recipes.py
+${PYSITELIB}/diskcache/recipes.pyc
+${PYSITELIB}/diskcache/recipes.pyo

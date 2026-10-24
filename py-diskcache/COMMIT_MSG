@@ -1,0 +1,4 @@
+wip/py-diskcache: Import py-diskcache-5.6.3
+
+DiskCache is a disk and file backed persistent cache written in pure
+Python (SQLite plus files).  Needed by ManimGL (wip/py-manimgl).
