@@ -1,0 +1,5 @@
+devel/glab: Add glab version 1.124.0
+
+glab is the official GitLab command-line tool. It brings merge requests,
+issues, CI/CD pipelines, releases and other GitLab features to the
+terminal, alongside git.
