@@ -1,13 +1,14 @@
 @comment $NetBSD$
-bin/publish.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/dataclasses_json/__init__.py
 ${PYSITELIB}/dataclasses_json/__init__.pyc
 ${PYSITELIB}/dataclasses_json/__init__.pyo
+${PYSITELIB}/dataclasses_json/__version__.py
+${PYSITELIB}/dataclasses_json/__version__.pyc
+${PYSITELIB}/dataclasses_json/__version__.pyo
 ${PYSITELIB}/dataclasses_json/api.py
 ${PYSITELIB}/dataclasses_json/api.pyc
 ${PYSITELIB}/dataclasses_json/api.pyo
@@ -20,6 +21,10 @@ ${PYSITELIB}/dataclasses_json/core.pyo
 ${PYSITELIB}/dataclasses_json/mm.py
 ${PYSITELIB}/dataclasses_json/mm.pyc
 ${PYSITELIB}/dataclasses_json/mm.pyo
+${PYSITELIB}/dataclasses_json/py.typed
+${PYSITELIB}/dataclasses_json/stringcase.py
+${PYSITELIB}/dataclasses_json/stringcase.pyc
+${PYSITELIB}/dataclasses_json/stringcase.pyo
 ${PYSITELIB}/dataclasses_json/undefined.py
 ${PYSITELIB}/dataclasses_json/undefined.pyc
 ${PYSITELIB}/dataclasses_json/undefined.pyo

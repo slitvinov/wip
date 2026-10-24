@@ -1,0 +1,6 @@
+wip/py-dataclasses-json: update to 0.6.7
+
+Update from 0.5.2 to 0.6.7 and switch from egg.mk to wheel.mk
+(poetry-core build backend).  Add the missing marshmallow and
+typing-inspect dependencies.  Needed by pygltflib
+(wip/py-pygltflib).

@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (dataclasses-json-0.5.2.tar.gz) = 2da44c16b1a3a8fa61ed5b9c64f23fb435f6b356
-SHA512 (dataclasses-json-0.5.2.tar.gz) = 459de85d0a503908c9d4cb18e5a7a7f4d3c8e3ec92e4ca432f567920050a454f384459826e7c54d314131d62f4593e4ccbf0441aa4c773a15442499d79afe9be
-Size (dataclasses-json-0.5.2.tar.gz) = 28424 bytes
+BLAKE2s (dataclasses_json-0.6.7.tar.gz) = 5473436711d5eeb7f2b5043c1fe3d411c559b35811ae81ba2006c9db985f594f
+SHA512 (dataclasses_json-0.6.7.tar.gz) = 1afa22b2bbdee45e17e63c627a147f94eb1a4aabbd7f25ad65e050eb0ab7f3ce34714dd43c6f73a9b25c41723191f1211a98d739478fcf25cb900d8e269b36f4
+Size (dataclasses_json-0.6.7.tar.gz) = 32227 bytes
