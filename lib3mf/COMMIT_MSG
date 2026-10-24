@@ -1,0 +1,7 @@
+wip/lib3mf: Import lib3mf-2.5.0
+
+lib3mf is the 3MF Consortium's reference implementation of the 3D
+Manufacturing Format (3MF).  Built from the GitHub release tag with
+pkgsrc zlib, libzip and fast_float instead of the git submodules.
+Needed by build123d (wip/py-build123d) through its Python binding
+(wip/py-lib3mf).

@@ -1,0 +1,5 @@
+lib3mf is the reference implementation of the 3D Manufacturing Format
+(3MF) file standard by the 3MF Consortium.  It reads and writes 3MF
+packages with meshes, components, build items, colors, textures,
+materials, beam lattices, slices and the other 3MF extensions, and
+provides a C API with generated C++, Python and other bindings.
