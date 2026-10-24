@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (svgpathtools-1.8.0.tar.gz) = 391b54ac07d5cb4f970d6d10b927afe18360f13cc5d2c3274e7c86bc712c7bf7
+SHA512 (svgpathtools-1.8.0.tar.gz) = 401b6ba430166d846f6385a7626082102bf559d9cf4ec23644e957b1bd52a67dc20208f1c74f34240e227c81814e2886050c24799d8fcdc5b61e2ffc5a73b0f0
+Size (svgpathtools-1.8.0.tar.gz) = 2140587 bytes

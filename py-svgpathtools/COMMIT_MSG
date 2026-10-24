@@ -1,0 +1,4 @@
+wip/py-svgpathtools: Import py-svgpathtools-1.8.0
+
+svgpathtools manipulates and analyzes SVG paths and Bezier curves.
+Needed by build123d (wip/py-build123d) for SVG import.

@@ -1,0 +1,4 @@
+svgpathtools is a collection of tools for manipulating and analyzing
+SVG path objects and Bezier curves: reading and writing SVG files,
+converting between path segments and polynomials, arc length, curve
+intersections, tangents, normals, curvature and offsetting.
