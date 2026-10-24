@@ -1,0 +1,6 @@
+@comment $NetBSD$
+${PYSITELIB}/lib3mf/Lib3MF.py
+${PYSITELIB}/lib3mf/Lib3MF.pyc
+${PYSITELIB}/lib3mf/__init__.py
+${PYSITELIB}/lib3mf/__init__.pyc
+${PYSITELIB}/lib3mf/lib3mf.${LIB3MF_SOEXT}

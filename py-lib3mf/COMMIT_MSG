@@ -1,0 +1,7 @@
+wip/py-lib3mf: Import py-lib3mf-2.5.0
+
+The Python (ctypes) binding of lib3mf (wip/lib3mf), installed as the
+"lib3mf" package with the same layout as the PyPI wheel: Lib3MF.py, an
+__init__.py written for pkgsrc (the wheel's is not in the source
+tree) and a lib3mf.dylib symlink to the pkgsrc library.  Needed by
+build123d (wip/py-build123d) for 3MF import and export.
