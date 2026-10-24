@@ -1,0 +1,17 @@
+wip/ospray: Import ospray-3.2.0
+
+Intel OSPRay is a ray tracing rendering engine for scientific
+visualization, used by ParaView and OVITO.  3.2.0 is the latest
+release; it builds against Embree 4.4.1, Open VKL 2.0.2, ISPC 1.30.0,
+OIDN 2.5.0 and rkcommon 1.15.4 (a patch drops the EXACT rkcommon 1.14.0
+requirement).
+
+Enabled: CPU device (ISPC neon-i32x8 on aarch64, matching Embree's and
+Open VKL's NEON2X builds), volumes (Open VKL), the OIDN denoiser module,
+the MPI distributed/offload modules (Open MPI), and the apps:
+ospTutorial*, ospExamples (GLFW/ImGui), ospBenchmark (google-benchmark),
+ospTestSuite (googletest) and libospray_testing.  Dear ImGui and stb,
+which the apps fetch with FetchContent, come as extra distfiles.
+
+Disabled: the GPU (SYCL) device and multidevice module, which need
+Intel's oneAPI compiler and an Intel GPU.

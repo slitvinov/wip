@@ -1,0 +1,7 @@
+Intel OSPRay is an open source, scalable and portable ray tracing
+engine for high-performance, high-fidelity visualization.  It provides
+a C/C++ API for rendering geometry (triangle and quad meshes, curves,
+spheres, boxes, planes, isosurfaces) and volumes (through Open VKL)
+with ray casting, ambient occlusion, SciVis and path tracing
+renderers, plus distributed rendering over MPI.  ParaView, VisIt and
+OVITO use it as a rendering backend.
