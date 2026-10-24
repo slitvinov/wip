@@ -1,0 +1,5 @@
+wgpu-py is a Python implementation of the WebGPU API, a next generation
+GPU API for rendering and compute on Metal, Vulkan and DirectX 12.  It
+wraps wgpu-native through cffi and follows the WebGPU spec closely (with
+Pythonic names), and draws to windows through rendercanvas or renders
+offscreen to textures that can be read back as arrays.

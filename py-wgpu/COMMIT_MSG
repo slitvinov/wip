@@ -1,0 +1,6 @@
+wip/py-wgpu: Import py-wgpu-0.32.0
+
+wgpu-py: WebGPU for Python, a cffi wrapper of wgpu-native.  Uses
+pkgsrc's wip/wgpu-native (29.0.1.1, the version 0.32.0 targets) from
+${PREFIX}/lib instead of a downloaded binary; on macOS it renders
+through Metal.  Needed by ManimGL's renderer (wip/py-manimgl).

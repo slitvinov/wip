@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (wgpu-0.32.0.tar.gz) = ccf415a5e631e4b466094429a9306badb489d33046f1b36c2ea23645e88e4a59
+SHA512 (wgpu-0.32.0.tar.gz) = 48e218ce742d025534cb5742c70f6e92ba55fc9ddddfc956bbf8ee405db2a590a47e3c5910a23955f9e375bcfc4b7f3c80d0bfc0d60de7dbd809b407efce3068
+Size (wgpu-0.32.0.tar.gz) = 197152 bytes
