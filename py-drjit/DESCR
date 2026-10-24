@@ -1,0 +1,8 @@
+Dr.Jit is a just-in-time (JIT) compiler for ordinary and differentiable
+computation. It traces Python or C++ array programs, fuses them into
+kernels and compiles them for the CPU (via LLVM) or for the GPU (CUDA,
+or Metal on Apple Silicon). Its automatic differentiation layer is the
+foundation of the Mitsuba 3 differentiable renderer.
+
+This package provides the Python module, the drjit-core JIT library
+(LLVM backend, plus the Metal backend on macOS) and the C++ headers.

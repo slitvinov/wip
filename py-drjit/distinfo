@@ -1,0 +1,22 @@
+$NetBSD$
+
+BLAKE2s (drjit-1.5.0.tar.gz) = c61c6d98a0ed9daf8eb206bd9a04e8e2aaa0d307554d063d669c285c9abf95ac
+SHA512 (drjit-1.5.0.tar.gz) = 729f6d18a43eef1242f8cc5733bca50668cfe3145fa80e10ea20ea08856794d6b4bbc15dda2a016da9eecdff8a60c31669cf21adfd5ef82c65b27545157e7f87
+Size (drjit-1.5.0.tar.gz) = 940634 bytes
+BLAKE2s (mitsuba-renderer-cmake-defaults-d65442956cd78772ba26ba25dc552de22566b717.tar.gz) = c2d72daa2e6df6be9338b948be7f0fe7780180a2c2315e641d1e921ac388a5c2
+SHA512 (mitsuba-renderer-cmake-defaults-d65442956cd78772ba26ba25dc552de22566b717.tar.gz) = ea344f7790c5844c67a03f371fbf909f713b64d4ae6bf521b8d86467a398dab61df0f828be05551633a885731c9dc1146583e16453aba54b0e7fa390483ef3d3
+Size (mitsuba-renderer-cmake-defaults-d65442956cd78772ba26ba25dc552de22566b717.tar.gz) = 3965 bytes
+BLAKE2s (mitsuba-renderer-drjit-core-3b96411288b9938889045308654ba37d4ef24b71.tar.gz) = 24aedc0b575f25a942c98718ab106c41a4e2c545fe0ef9013bda1a594973b700
+SHA512 (mitsuba-renderer-drjit-core-3b96411288b9938889045308654ba37d4ef24b71.tar.gz) = 3b33bdfd18288229a1babf994d369110062213eff10d96d54ae8f933511c9ac9e3d93946c69f83f6ed873bd6cc348848f4785b4637b7599517b5eae13ddc863b
+Size (mitsuba-renderer-drjit-core-3b96411288b9938889045308654ba37d4ef24b71.tar.gz) = 1163959 bytes
+BLAKE2s (mitsuba-renderer-nanothread-a2097209e10852962c485ee46d84d28e7a63a1a1.tar.gz) = a6147ce55e9720bf696fa6656cee6bce66149904f9d5fa63ed2819c2d910f245
+SHA512 (mitsuba-renderer-nanothread-a2097209e10852962c485ee46d84d28e7a63a1a1.tar.gz) = 466b7366ad4b455b3421ee9610aba1b5b27f44b1cf1605f7d800348e86d54b3b27db3beb900bb4fb84cb527842ccdb3631aa64591c61441d93552c411f83fb5e
+Size (mitsuba-renderer-nanothread-a2097209e10852962c485ee46d84d28e7a63a1a1.tar.gz) = 29240 bytes
+BLAKE2s (mitsuba-renderer-robin-map-f70fd39a960385ef0a963aef00b750e4740228c0.tar.gz) = 797238d9d980ed33d4ee95a687bbc9940818fcc23af185987f67ecb98ec4a774
+SHA512 (mitsuba-renderer-robin-map-f70fd39a960385ef0a963aef00b750e4740228c0.tar.gz) = ace2d468b0c6df63781fd1323be3177b762ae4ef8143556f2103b87924199f12c9a1bc8444a7ea218cdb4049ebffa0c17ab7589bccf142ce9ff3159d855214b3
+Size (mitsuba-renderer-robin-map-f70fd39a960385ef0a963aef00b750e4740228c0.tar.gz) = 71168 bytes
+BLAKE2s (wjakob-nanobind-v2.14.0.tar.gz) = bd3c1244a4a1b883ddd4dfe314c0bf660b8e8d54df6db2778a5529dd5fdc8320
+SHA512 (wjakob-nanobind-v2.14.0.tar.gz) = da52c51dc7b12623131abb4169fc91b4e8524e1c947348091ea4c6ec57a89d9eeb106db0900a78a7b206001c5eea736618c5416f61f4caf15c8e9d862d27d822
+Size (wjakob-nanobind-v2.14.0.tar.gz) = 992786 bytes
+SHA1 (patch-ext_drjit-core_ext_nanothread_ext_cmake-defaults_CMakeLists.txt) = 0db86caebd413aa454be1295305d510377a4059d
+SHA1 (patch-ext_drjit-core_src_llvm__api.cpp) = 713ced18c2ca7dca0b23c959f132bcbfbd6f81ff

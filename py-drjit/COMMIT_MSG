@@ -1,0 +1,8 @@
+wip/py-drjit: Import py-drjit-1.5.0
+
+Dr.Jit is a just-in-time compiler for ordinary and differentiable
+computation, used by the Mitsuba 3 renderer. It provides LLVM (CPU)
+and, on macOS, Metal (GPU) backends plus automatic differentiation.
+
+The LLVM backend dlopen()s libLLVM at run time; it defaults to
+pkgsrc's lang/llvm (DRJIT_LIBLLVM_PATH still overrides it).

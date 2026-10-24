@@ -1,0 +1,10 @@
+@comment $NetBSD$
+${PYSITELIB}/drjit/metal/__init__.py
+${PYSITELIB}/drjit/metal/__init__.pyc
+${PYSITELIB}/drjit/metal/__init__.pyi
+${PYSITELIB}/drjit/metal/__init__.pyo
+${PYSITELIB}/drjit/metal/ad.py
+${PYSITELIB}/drjit/metal/ad.pyc
+${PYSITELIB}/drjit/metal/ad.pyi
+${PYSITELIB}/drjit/metal/ad.pyo
+${PYSITELIB}/drjit/metal/py.typed
