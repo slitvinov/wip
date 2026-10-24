@@ -1,0 +1,4 @@
+ocp_gordon builds Gordon surfaces, B-spline surfaces that interpolate
+a network of profile and guide curves, for OpenCascade through the OCP
+Python bindings.  It is a pure-Python port of the C++ occ_gordon
+library.

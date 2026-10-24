@@ -1,0 +1,5 @@
+wip/py-ocp-gordon: Import py-ocp-gordon-0.3.1
+
+ocp_gordon builds Gordon surfaces (B-spline surfaces through a curve
+network) for OpenCascade via OCP.  Needed by build123d
+(wip/py-build123d).

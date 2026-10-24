@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ocp_gordon-0.3.1.tar.gz) = 80095bc8149b7d6f5846a68940037b79ba9c808be5a45eece6075e0ec2b4c7d6
+SHA512 (ocp_gordon-0.3.1.tar.gz) = 8bfc5be1dad619b8743fb9c659d0e73318f537ea311d6a5ef41b2a2b110abf4c30c3b0a5307126a23ae78d73af1bdae6d6740a0ba9679ebad3101c082e00e823
+Size (ocp_gordon-0.3.1.tar.gz) = 114168 bytes
