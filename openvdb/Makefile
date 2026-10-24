@@ -2,6 +2,8 @@
 
 DISTNAME=	openvdb-${PKGVERSION}
 PKGVERSION=	12.1.1
+# NanoVDB headers added.
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	openvdb
@@ -17,6 +19,13 @@ GCC_REQD+=	11.3
 USE_TOOLS+=	gmake pkg-config
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
+
+# NanoVDB (header-only, shipped with OpenVDB) is needed for GPU volume
+# rendering in e.g. Blender's Cycles.
+CMAKE_CONFIGURE_ARGS+=	-DUSE_NANOVDB=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_CCACHE=OFF
+# Newer install_name_tool fails to delete the build RPATH on Darwin.
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SKIP_BUILD_RPATH=ON
 
 pre-configure:
 	cd ${WRKSRC} && mkdir build
