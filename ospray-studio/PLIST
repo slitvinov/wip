@@ -1,0 +1,16 @@
+@comment $NetBSD$
+bin/ospStudio
+lib/libospray_sg.dylib
+share/doc/ospray_studio/CHANGELOG.md
+share/doc/ospray_studio/LICENSE.txt
+share/doc/ospray_studio/README.md
+share/doc/ospray_studio/third-party-programs-DPCPP.txt
+share/doc/ospray_studio/third-party-programs-Embree.txt
+share/doc/ospray_studio/third-party-programs-ISPC.txt
+share/doc/ospray_studio/third-party-programs-OIDN.txt
+share/doc/ospray_studio/third-party-programs-OSPRay.txt
+share/doc/ospray_studio/third-party-programs-OpenVKL.txt
+share/doc/ospray_studio/third-party-programs-oneAPI-DPCPP.txt
+share/doc/ospray_studio/third-party-programs-oneDNN.txt
+share/doc/ospray_studio/third-party-programs-oneTBB.txt
+share/doc/ospray_studio/third-party-programs.txt

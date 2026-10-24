@@ -1,0 +1,6 @@
+OSPRay Studio is an open source, interactive visualization and ray
+tracing application built on Intel OSPRay.  It loads scenes and
+models (glTF, OBJ, raw and structured volumes, point and image
+formats), renders them interactively with OSPRay's renderers through a
+scene graph, and supports batch rendering of camera paths and
+animations.

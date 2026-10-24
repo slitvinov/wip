@@ -1,0 +1,10 @@
+wip/ospray-studio: Import ospray-studio-1.1.0
+
+OSPRay Studio is Intel's interactive scene graph viewer and batch
+renderer built on OSPRay (wip/ospray).  The bundled small libraries
+(ImGui, tinygltf, tinyexr, json, CLI11, ...) are used; benchmarking
+support uses benchmarks/google-benchmark.
+
+Off for now: the Python scene graph module (pybind11), OpenImageIO,
+OpenEXR, OpenVDB and Draco support, MPI, and the plugins.
+OSPRAY_INSTALL is off so the OSPRay libraries are not copied in.
