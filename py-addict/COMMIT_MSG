@@ -1,0 +1,4 @@
+wip/py-addict: Import py-addict-2.4.0
+
+addict is a dictionary whose items can be set using both attribute and
+item syntax.  Needed by ManimGL (wip/py-manimgl).

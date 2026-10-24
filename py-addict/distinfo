@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (addict-2.4.0.tar.gz) = 3f0f69e183ad0ae46d08325cf4f910ebcee174ed32f0c34fa2e7cdab67e86f07
+SHA512 (addict-2.4.0.tar.gz) = fcaeee3086053e1d66b35c38878b952bf36f7350018456e2890e29a1b77f17c383779875170a49a5ca53fa715884b712fcfd3823ec90433a7c3ea72e58856e4f
+Size (addict-2.4.0.tar.gz) = 9186 bytes

@@ -1,0 +1,4 @@
+addict is a Python module that gives you dictionaries whose values are
+both gettable and settable using attributes, in addition to standard
+item-syntax.  Nested dictionaries are created on the fly, which makes it
+convenient for building up configuration trees and JSON-like data.
