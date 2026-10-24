@@ -1,0 +1,7 @@
+wip/py-av: Import py-av-19.0.2
+
+PyAV: Pythonic Cython bindings for the FFmpeg libraries (containers,
+streams, codecs, frames, filters, NumPy conversion).  Built against
+multimedia/ffmpeg8: PyAV 19 uses FFmpeg 8 API (AV_FRAME_DATA_EXIF, ...)
+and does not build with FFmpeg 7.  Needed by ManimGL's VideoMobject
+(wip/py-manimgl).

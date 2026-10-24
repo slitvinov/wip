@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (av-19.0.2.tar.gz) = 8ff08afb2210933bd1002cbf4b7ba865577a9f66fd365bbabe5111a5f312c656
+SHA512 (av-19.0.2.tar.gz) = 208e06d9ca64a2d9e17de84eab7803feb515a2616edf1db0476d1b73932a1f221096b86c39b9777277c6c55f1f02a633010ef9cba5db5cad53da8cc51dc168dc
+Size (av-19.0.2.tar.gz) = 4277157 bytes

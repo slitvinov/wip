@@ -1,0 +1,5 @@
+PyAV is a Pythonic binding for the FFmpeg libraries (libavformat,
+libavcodec, libavfilter, libswscale, libswresample).  It gives direct
+and precise access to containers, streams, packets, codecs and frames:
+demuxing, decoding, filtering, encoding and muxing audio and video, with
+conversion of frames to and from NumPy arrays and PIL images.
