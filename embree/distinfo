@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (embree-4.4.1.tar.gz) = 35e881d3cbc7a76ffbc9999a7eb3697ce0c3d145945ad4d2bc0b58e8fa24905b
+SHA512 (embree-4.4.1.tar.gz) = 5700d6e16b3e9e5f0d087e421c831e14f054769dfa30edb45791fee3ab33c698355d8fad86791cea6bf200ebe7ce64f0394063d29dd927afe93d345c2cd6897a
+Size (embree-4.4.1.tar.gz) = 70605063 bytes

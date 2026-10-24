@@ -1,0 +1,6 @@
+graphics/embree: Add embree version 4.4.1
+
+Embree is a collection of high-performance ray tracing kernels,
+developed by Intel. It provides ray tracing kernels optimized for
+x86 (SSE, AVX, AVX2, AVX-512) and ARM (NEON) CPUs, used by renderers
+such as Blender's Cycles.
