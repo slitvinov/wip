@@ -1,0 +1,7 @@
+wip/py-marshmallow: update to 3.26.2
+
+Move from the 2018 beta 3.0.0b8 to the latest 3.x release, 3.26.2,
+which fixes CVE-2018-17175 and CVE-2025-68480 (TODO removed).  Stay on
+3.x: dataclasses-json (wip/py-dataclasses-json) requires
+marshmallow<4.  Build with wheel.mk and flit_core; the simplejson and
+dateutil dependencies are gone upstream.
