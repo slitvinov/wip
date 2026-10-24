@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (svgelements-1.9.6.tar.gz) = 30da14fd6abf666c0ef6f71ccc875ecde698918045d4c0da358099a58ca11c91
+SHA512 (svgelements-1.9.6.tar.gz) = 9dc018a492a9935d55ff75d609674592949ed52825f17e20eda21735ea3a82189f648c8ee9ecf757b96ab1bfbf050cb6bade34e5dcfa9a08b128c95c59477f16
+Size (svgelements-1.9.6.tar.gz) = 162145 bytes

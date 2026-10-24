@@ -1,0 +1,5 @@
+wip/py-svgelements: Import py-svgelements-1.9.6
+
+svgelements parses SVG into geometric objects (paths, shapes, groups)
+with transforms, units and styles.  Needed by ManimGL (SVGMobject,
+Tex, Text; wip/py-manimgl).

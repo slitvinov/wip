@@ -1,0 +1,4 @@
+svgelements parses SVG files into geometric Python objects (paths,
+shapes, text, images, groups) with full support for transforms, units,
+styles, viewBox and the use element, following the SVG 1.1 and SVG 2
+specifications.  It has no dependencies outside the standard library.
