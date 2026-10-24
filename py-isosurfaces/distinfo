@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (isosurfaces-0.1.2.tar.gz) = b59d85e97eae105528b4af576ce34a5a47654c5465962038fd3d49fb2f602eb0
+SHA512 (isosurfaces-0.1.2.tar.gz) = 91681caea75092debc84925590515db05a7c66f3ad513dd2a346f20a4f196f297a7dec06a84e7343793bd39075786128e1ccf8c9ac36211dc7e1ebf8ce3c5d34
+Size (isosurfaces-0.1.2.tar.gz) = 11348 bytes

@@ -1,0 +1,4 @@
+isosurfaces constructs isolines (2D) and isosurfaces (3D) of a scalar
+field defined by a Python function rather than by a uniform grid.  It
+refines the sampling adaptively near the surface, so sharp features are
+resolved without evaluating the function everywhere at high resolution.

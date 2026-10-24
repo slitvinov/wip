@@ -1,0 +1,5 @@
+wip/py-isosurfaces: Import py-isosurfaces-0.1.2
+
+isosurfaces constructs isolines and isosurfaces of a scalar field given
+by a function (adaptive, not a uniform grid).  Needed by ManimGL
+(ImplicitFunction, wip/py-manimgl).

@@ -1,0 +1,22 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/isosurfaces/__init__.py
+${PYSITELIB}/isosurfaces/__init__.pyc
+${PYSITELIB}/isosurfaces/__init__.pyo
+${PYSITELIB}/isosurfaces/cell.py
+${PYSITELIB}/isosurfaces/cell.pyc
+${PYSITELIB}/isosurfaces/cell.pyo
+${PYSITELIB}/isosurfaces/isoline.py
+${PYSITELIB}/isosurfaces/isoline.pyc
+${PYSITELIB}/isosurfaces/isoline.pyo
+${PYSITELIB}/isosurfaces/isosurface.py
+${PYSITELIB}/isosurfaces/isosurface.pyc
+${PYSITELIB}/isosurfaces/isosurface.pyo
+${PYSITELIB}/isosurfaces/point.py
+${PYSITELIB}/isosurfaces/point.pyc
+${PYSITELIB}/isosurfaces/point.pyo
+${PYSITELIB}/isosurfaces/py.typed
