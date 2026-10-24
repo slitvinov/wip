@@ -1,0 +1,4 @@
+pydub manipulates audio with a simple and easy high level interface:
+open, slice, concatenate, overlay, fade, change gain and export audio
+segments in Python.  WAV is handled natively; other formats (MP3, OGG,
+FLAC, ...) are decoded and encoded through ffmpeg.

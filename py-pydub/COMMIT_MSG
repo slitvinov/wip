@@ -1,0 +1,6 @@
+wip/py-pydub: Import py-pydub-0.25.1
+
+pydub manipulates audio (slice, overlay, export) with a simple high
+level interface, using ffmpeg for non-WAV formats.  Falls back to
+pkgsrc's ffmpeg7/ffprobe7 when no ffmpeg is on PATH, and depends on
+py-audioop-lts on Python 3.13+.  Needed by ManimGL (wip/py-manimgl).

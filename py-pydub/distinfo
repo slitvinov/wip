@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (pydub-0.25.1.tar.gz) = 1fe0498a2091cc65bf946867c44ff35ad68902b61db2090eddf1ec3735154bf8
+SHA512 (pydub-0.25.1.tar.gz) = eb33e619786a4abe47d4ab353d882e7dfcbc5d2f0eafd63f866b6d70a3fbc62796646aaa6eb30a681f008ae46b8c1264144a7005116c7628c3fc5d2c4a33eb4f
+Size (pydub-0.25.1.tar.gz) = 38326 bytes
+SHA1 (patch-pydub_utils.py) = 10d095434e87e129dd4cda1f627ae5b7330d6d2f
