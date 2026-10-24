@@ -1,0 +1,4 @@
+Alembic is an open computer graphics interchange framework. It distills
+complex, animated scenes into a non-procedural, application-independent
+set of baked geometric results, for exchanging data between digital
+content creation and rendering applications.
