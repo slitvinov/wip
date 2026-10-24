@@ -1,0 +1,5 @@
+wip/py-ezdxf: Import py-ezdxf-1.4.5
+
+ezdxf creates, reads and modifies DXF drawings.  The optional Cython
+accelerator modules (ezdxf.acc) are built.  Needed by build123d
+(wip/py-build123d) for DXF import and export.

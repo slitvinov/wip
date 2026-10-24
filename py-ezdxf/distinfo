@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (ezdxf-1.4.5.tar.gz) = 8a26fd7599301e8b89dbe21279805f9105a5e1a5f3f33321b08a08a29da1d92c
+SHA512 (ezdxf-1.4.5.tar.gz) = 69c96caf4fc96c98ba46bee5b36583f4827511a69243619ea36b678f9effff3226f3915ff58e4c8a154674622265affcb33dd203c64ee32a926c4e2ac79ed902
+Size (ezdxf-1.4.5.tar.gz) = 1875857 bytes

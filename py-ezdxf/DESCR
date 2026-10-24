@@ -1,0 +1,6 @@
+ezdxf is a Python package to create new DXF files and read, modify
+and write existing DXF documents, from DXF R12 to R2018.  It keeps
+unknown tags of a document, so applications can work on files they do
+not fully understand.  It includes add-ons for text and geometry
+rendering and an optional C extension (built here) for faster vector
+math.
