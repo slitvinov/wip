@@ -17,8 +17,10 @@ INSTALLATION_DIRS+=	bin
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${PYTHON} build/gen.py
 
+# The default target also runs check_formatter and update_reference,
+# developer checks that need Chromium's cipd tool.
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ninja -j ${_MAKE_JOBS_N} -C out gn gn_unittests
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./out/gn_unittests

@@ -1,0 +1,6 @@
+wip/gn-git: fix the build with current gn
+
+Regenerate the NetBSD/evbarm patch for the reworked host CPU detection
+in src/gn/args.cc, and build only the gn and gn_unittests targets: the
+default target now also runs check_formatter, which needs Chromium's
+cipd tool.  Used by wip/py-skia-pathops to build its bundled Skia.
