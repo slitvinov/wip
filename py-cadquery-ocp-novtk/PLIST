@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/OCP.so
+${PYSITELIB}/cadquery_ocp_novtk-${PKGVERSION}.dist-info/INSTALLER
+${PYSITELIB}/cadquery_ocp_novtk-${PKGVERSION}.dist-info/METADATA
+${PYSITELIB}/cadquery_ocp_novtk-${PKGVERSION}.dist-info/top_level.txt

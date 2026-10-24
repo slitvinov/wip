@@ -1,0 +1,44 @@
+$NetBSD$
+
+Build the novtk variant, as CadQuery/ocp-build-system does: no VTK.
+Only the Python module part is needed (the extension links with
+-undefined dynamic_lookup), not the embedding library.
+
+--- CMakeLists.txt.orig	2026-10-24 13:13:10
++++ CMakeLists.txt
+@@ -8,25 +8,13 @@
+ 
+ list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR} )
+ 
+-find_package (Python REQUIRED COMPONENTS Interpreter Development)
++find_package (Python REQUIRED COMPONENTS Interpreter Development.Module)
+ message( STATUS "Python lib: ${Python_LIBRARIES}" )
+ 
+ SET(PYTHON_SP_DIR "site-packages" CACHE PATH "Python site-packages directory (for installing)")
+ 
+ find_package( fmt  REQUIRED )
+ find_package( pybind11 REQUIRED )
+-find_package( VTK REQUIRED
+-  COMPONENTS
+-    WrappingPythonCore
+-    RenderingCore
+-    RenderingOpenGL2
+-    CommonDataModel
+-    CommonExecutionModel
+-    freetype
+-  OPTIONAL_COMPONENTS
+-    mpi
+-)
+-message(STATUS "VTK ${VTK_VERSION} found")
+ find_package( OpenCASCADE REQUIRED )
+ 
+ include_directories( ${PROJECT_SOURCE_DIR} )
+@@ -37,7 +25,7 @@
+ target_include_directories( OCP PRIVATE ${OpenCASCADE_INCLUDE_DIR} )
+ 
+ target_link_libraries( OCP PRIVATE ${OpenCASCADE_LIBRARIES} )
+-target_link_libraries( OCP PRIVATE pybind11::pybind11 VTK::WrappingPythonCore VTK::RenderingCore VTK::CommonDataModel VTK::CommonExecutionModel fmt::fmt)
++target_link_libraries( OCP PRIVATE pybind11::pybind11 fmt::fmt)
+ 
+ set_target_properties( OCP
+                        PROPERTIES

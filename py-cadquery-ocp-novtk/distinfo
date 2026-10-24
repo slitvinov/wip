@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (cadquery-ocp-8.0.1.1/OCP_src_stubs_OSX.zip) = 7a4a54b80887b4a8d77e8bbb5d1a9a19620a347699dee635db6f7ab46880dd6a
+SHA512 (cadquery-ocp-8.0.1.1/OCP_src_stubs_OSX.zip) = 6e994cccd120701744c677c6de656b9d562aafcac32964f6cc6476d08964c747a9dfc198b2c50da2b5a21ab45745bd2aa5ea469ab80d0453a713fa13d7334780
+Size (cadquery-ocp-8.0.1.1/OCP_src_stubs_OSX.zip) = 5975431 bytes
+SHA1 (patch-CMakeLists.txt) = 698fd9051fe2e41721cac46ed1fc3c4f1912656e

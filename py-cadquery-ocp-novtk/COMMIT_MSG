@@ -1,0 +1,13 @@
+wip/py-cadquery-ocp-novtk: Import py-cadquery-ocp-novtk-8.0.1.1
+
+OCP is the pybind11 binding of OpenCascade (OCCT) used by CadQuery
+and build123d.  Built from the pre-generated sources that upstream
+attaches to each release (OCP_src_stubs_OSX.zip), so pywrap/libclang
+is not needed, against OCCT 8.0.1 (wip/occt) and pybind11 3.1.0
+(upstream uses 2.13; the generated code builds unchanged).
+
+The VTK parts are removed the way CadQuery/ocp-build-system builds the
+cadquery-ocp-novtk wheel (patch-CMakeLists.txt plus a SUBST that drops
+the IVtk registrations).  The module is installed as site-packages/OCP
+like the conda package, with a dist-info named cadquery_ocp_novtk for
+importlib.metadata.  Needed by build123d (wip/py-build123d).
