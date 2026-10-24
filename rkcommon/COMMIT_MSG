@@ -1,0 +1,5 @@
+wip/rkcommon: Import rkcommon-1.15.4
+
+rkcommon is the C++ utility and CMake support library shared by the
+Intel Rendering Toolkit (OSPRay, Open VKL).  It is built with TBB
+tasking; the tests are off because they fetch Catch2 at configure time.

@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (rkcommon-1.15.4.tar.gz) = d701aaac0b0970fd6009826098a4017d5638ea8087aa3f3ae243098728d212dc
+SHA512 (rkcommon-1.15.4.tar.gz) = 7f0ab53bbc03ec91a927ab5f050945c8f23111849cb42c426dbbb20b77bdc06d0e23e67591287ac515d4fff8e6856223df80de7bc31258229b8db6ac54debe68
+Size (rkcommon-1.15.4.tar.gz) = 201178 bytes

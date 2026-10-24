@@ -1,0 +1,4 @@
+rkcommon is a library of C++ utilities and CMake infrastructure shared
+by the Intel Rendering Toolkit projects (OSPRay, Open VKL, OSPRay
+Studio): small vector/matrix math, affine spaces, boxes and ranges,
+memory and array helpers, and a tasking layer on top of TBB.
