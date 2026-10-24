@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (trimesh-1.11.1.tar.gz) = 7542ead6f012bde1d6c56ea32bce6d93fea9b91e
-SHA512 (trimesh-1.11.1.tar.gz) = 7734d5f1ec1803d3f6a541cf418f4ccd06d9d4d521da1b31a65537b70b0595c119bda59eaab2ebd3a9631347069e2ca075f5a425f0a8f5486ae2bb37490038d6
-Size (trimesh-1.11.1.tar.gz) = 104669 bytes
+BLAKE2s (trimesh-5.2.0.tar.gz) = c24bf69d6c77f214919aa0193b890e68170b224403ff58a398d22db2f0b0ab22
+SHA512 (trimesh-5.2.0.tar.gz) = 71eb3bc592e31cc520825ba119dda3d1a8dbade15a869f67430e1b95dbb501a09302dbafc28f23778f13030f6306913b9ab7941d901143bd2158d84334f12552
+Size (trimesh-5.2.0.tar.gz) = 880133 bytes

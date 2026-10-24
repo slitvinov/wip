@@ -1,0 +1,1 @@
+bin/trimesh @PREFIX@/bin/trimesh-@PYVERSSUFFIX@

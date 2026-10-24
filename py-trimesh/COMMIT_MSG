@@ -1,0 +1,6 @@
+wip/py-trimesh: update to 5.2.0
+
+The package was stuck at 1.11.1 (2015, egg.mk).  Update to the current
+trimesh 5.2.0, switch to wheel.mk, and depend on the optional modules
+that are in pkgsrc (networkx, scipy, Pillow for OBJ textures).  Needed
+by ManimGL (TexturedMesh, wip/py-manimgl).
