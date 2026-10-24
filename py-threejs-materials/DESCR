@@ -1,0 +1,5 @@
+threejs-materials downloads physically based rendering (PBR) materials
+on demand from open libraries (ambientCG, Poly Haven, GPUOpen and
+others), converts them to Three.js MeshPhysicalMaterial JSON and can
+inject them into glTF files.  It includes a set of built-in materials
+with their textures.

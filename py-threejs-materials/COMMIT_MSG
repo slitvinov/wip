@@ -1,0 +1,5 @@
+wip/py-threejs-materials: Import py-threejs-materials-1.2.5
+
+threejs-materials fetches PBR materials and converts them to Three.js
+MeshPhysicalMaterial JSON and glTF.  Needed by build123d
+(wip/py-build123d, glTF export) and bd_materials (wip/py-bd-materials).

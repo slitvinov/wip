@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (threejs_materials-1.2.5.tar.gz) = 98dd56ed11f3dba975516650dfcbfb8051a9a6b2907fb475d021c427c887df80
+SHA512 (threejs_materials-1.2.5.tar.gz) = 9cfb93493a19f69137c0a82e10f1de86877198a582fa8bd5ce72676156a942fec2405b28986a127b14861adcfbc00b07c7d1e20dfcbc52e5daf6a796e1022a09
+Size (threejs_materials-1.2.5.tar.gz) = 89863794 bytes
