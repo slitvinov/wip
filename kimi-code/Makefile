@@ -13,27 +13,32 @@ LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/kimi-code-${GITHUB_TAG}
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pax tar xz
+USE_TOOLS+=	awk gmake pax sed sort
 
 # package.json: "engines": {"node": ">=24.15.0"}
 NODE_VERSIONS_ACCEPTED=	24 26
 
 .include "../../mk/bsd.prefs.mk"
 
-PNPM_VERSION=	10.33.0
-PNPM_DIST=	pnpm-${PNPM_VERSION}.tgz
-# pnpm content store with every dependency in pnpm-lock.yaml, for the
-# platforms below; made by "make PNPM_STORE_UPDATE=yes patch pnpm-store",
-# which needs the network.
-PNPM_STORE=	${DISTNAME}-pnpm-store.tar.xz
-
+PNPM_VERSION=			10.33.0
+PNPM_DIST=			pnpm-${PNPM_VERSION}.tgz
 DISTFILES=			${DEFAULT_DISTFILES} ${PNPM_DIST}
-PNPM_STORE_UPDATE?=		no
-.if ${PNPM_STORE_UPDATE} != yes
-DISTFILES+=			${PNPM_STORE}
-.endif
+EXTRACT_ONLY=			${DEFAULT_DISTFILES} ${PNPM_DIST}
 SITES.${PNPM_DIST}=		https://registry.npmjs.org/pnpm/-/
 EXTRACT_DIR.${PNPM_DIST}=	${WRKDIR}/pnpm
+
+# Every package in pnpm-lock.yaml for the platforms below; regenerate
+# with "make NPM_DEPENDS_UPDATE=yes patch npm-depends", which needs the
+# network.
+NPM_DEPENDS_UPDATE?=	no
+.if ${NPM_DEPENDS_UPDATE} != yes
+.include "npm-depends.mk"
+.endif
+.for d in ${NPM_DEPENDS}
+NPM_DIST.${d}=	npm-${d:S,/,+,}.tgz
+DISTFILES+=	${NPM_DIST.${d}}
+SITES.${NPM_DIST.${d}}=	-https://registry.npmjs.org/${d:C,@[^@]*$,,}/-/${d:C,@[^@]*$,,:T}-${d:C,.*@,,}.tgz
+.endfor
 
 PNPM=		${SETENV} ${MAKE_ENV} ${PREFIX}/bin/node \
 		${WRKDIR}/pnpm/package/bin/pnpm.cjs
@@ -82,7 +87,13 @@ pre-configure:
 		> ${TOOLS_DIR}/bin/pnpm
 	${RUN}${CHMOD} +x ${TOOLS_DIR}/bin/pnpm
 
+# Load the npm tarballs into the pnpm store under the names a registry
+# fetch would give them.
 do-configure:
+	${RUN}cd ${DISTDIR} && ${PNPM} store add ${NPM_DEPENDS:S,/,+,:S,^,./npm-,:S,$,.tgz,}
+	${RUN}cd ${WRKDIR}/pnpm-store/v10/index && for f in */*-file+npm-*; do \
+		n=$${f#*-file+npm-}; ${MV} $$f $${f%%-file+*}-$${n%.tgz.json}.json; \
+	done
 	${RUN}cd ${WRKSRC} && ${PNPM} install --offline --frozen-lockfile
 
 # Rebuild the bundled native helper from source instead of shipping
@@ -121,19 +132,21 @@ SUBST_MESSAGE.node=	Fixing path to node.
 SUBST_FILES.node=	../deploy/dist/main.mjs
 SUBST_SED.node=		-e '1s,^\#!.*,\#!${PREFIX}/bin/node,'
 
-.PHONY: pnpm-store
-.if make(pnpm-store)
+.PHONY: npm-depends
+.if make(npm-depends)
 ALLOW_NETWORK_ACCESS=	yes
 .endif
 # pnpm fetches only the packages of the host platform; ask for all.
-pnpm-store:
+npm-depends:
 	${RUN}${RM} -rf ${WRKDIR}/pnpm-store
 	${RUN}${PRINTF} '\nsupportedArchitectures:\n  os: [darwin, linux]\n  cpu: [arm64, x64]\n  libc: [glibc]\n' \
 		>> ${WRKSRC}/pnpm-workspace.yaml
 	${RUN}cd ${WRKSRC} && ${PNPM} fetch --frozen-lockfile
-	${RUN}cd ${WRKDIR} && ${TAR} -cf ${PNPM_STORE:R} pnpm-store && \
-		${XZ} -9 -T0 ${PNPM_STORE:R}
-	@${ECHO} "Move ${WRKDIR}/${PNPM_STORE} to ${DISTDIR}, then make distinfo."
+	${RUN}cd ${WRKDIR}/pnpm-store/v10/index && ${LS} */*.json > ${WRKDIR}/npm-index
+	${RUN}${AWK} '{sub(/.*\/[0-9a-f]+-/, ""); sub(/\.json$$/, ""); sub(/\+/, "/"); \
+		print "NPM_DEPENDS+=\t" $$0}' ${WRKDIR}/npm-index > ${WRKDIR}/npm-depends
+	${RUN}{ ${PRINTF} '# $$''NetBSD$$\n\n'; ${SORT} -u ${WRKDIR}/npm-depends; } \
+		> ${.CURDIR}/npm-depends.mk
 
 .include "../../lang/nodejs/nodeversion.mk"
 .if ${OPSYS} != "Darwin"
