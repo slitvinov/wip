@@ -1,0 +1,13 @@
+$NetBSD$
+
+BLAKE2s (kimi-code-2.3.2-b8dd3a134060c6e80ba4a1659335cd63b68483f2.tar.gz) = 3e6179e5aa59196d200d8d69dbc9aece51e26539ff6d850af990203244b610b6
+SHA512 (kimi-code-2.3.2-b8dd3a134060c6e80ba4a1659335cd63b68483f2.tar.gz) = 4391818ea6632fd4681788180ca525021e5a5cdd137d33f5b4f3835e1cd78204e208d7e41ad6b604958e25f4ed1d666e811d0b9a79b2f8a88f129fa73422c410
+Size (kimi-code-2.3.2-b8dd3a134060c6e80ba4a1659335cd63b68483f2.tar.gz) = 25425938 bytes
+BLAKE2s (kimi-code-2.3.2-pnpm-store.tar.xz) = 4e0cbfe55626c367fd7cc736d51544e3e3a0bcfa5f45a706f302f761ad91ab17
+SHA512 (kimi-code-2.3.2-pnpm-store.tar.xz) = b187fc909dcf2d2347af24695c921c537e4b9b8ead11dfd8d2ecd081713f27bbb9f3eff318e021fe61c38280fc86b9bd4de0f287df3e4cc73d72b9da0f59fdf7
+Size (kimi-code-2.3.2-pnpm-store.tar.xz) = 398527172 bytes
+BLAKE2s (pnpm-10.33.0.tgz) = 8da9f2e275206a46d83c98f4d257ac1606ada0ba7b9851ef2abe71963a4ec32a
+SHA512 (pnpm-10.33.0.tgz) = 10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319
+Size (pnpm-10.33.0.tgz) = 4533784 bytes
+SHA1 (patch-apps_kimi-code_scripts_copy-native-assets.mjs) = 3000e59bb238b5cc58a2f445f52785752cda1440
+SHA1 (patch-apps_kimi-code_src_cli_update_preflight.ts) = 3459d2d9af0ff4892a597f857991e3a570a043b3
