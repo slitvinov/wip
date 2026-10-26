@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	codex-0.91.0
+DISTNAME=	codex-0.164.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openai/}
 GITHUB_TAG=	rust-v${PKGVERSION_NOREV}
@@ -10,42 +10,82 @@ HOMEPAGE=	https://github.com/openai/codex/
 COMMENT=	Lightweight coding agent that runs in your terminal
 LICENSE=	apache-2.0
 
+# Prebuilt V8 archives are published only for these platforms.
+ONLY_FOR_PLATFORM=	Darwin-*-aarch64 Darwin-*-x86_64
+ONLY_FOR_PLATFORM+=	Linux-*-aarch64 Linux-*-x86_64
+
 # bindgen (for rama-boring-sys) needs libclang
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
-
-WRKSRC=		${WRKDIR}/codex-rust-v${PKGVERSION_NOREV}/codex-rs
-USE_LANGUAGES=	c
-USE_TOOLS+=	git pkg-config perl gmake
 # needed by cmake-sys for rama-boring-sys
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-USE_LANGUAGES+=	c c++
 
-RUST_REQ=	1.89
+WRKSRC=		${WRKDIR}/codex-rust-v${PKGVERSION_NOREV}
+CARGO_WRKSRC=	${WRKSRC}/codex-rs
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config perl gmake
 
-# Depends on unpublished crates. Can't use cargo.mk to fetch them.
-CROSSTERM_REV=		87db8bfa6dc99427fd3b071681b07fc31c6ce995
-RATATUI_REV=		9b2ad1298408c45918ee9f8241a6f95498cdbed2
-WEZTERM_REV=		fe38df8409545a696909aa9a09e63438630f217d
-TOKIO_TUNGSTENITE_REV=	2ae536b0de793f3ddf31fc2f22d445bf1ef2023d
-TUNGSTENITE_REV=	f514de8644821113e5d18a027d6d28a5c8cc0a6e
-DISTFILES=		${DEFAULT_DISTFILES}
-DISTFILES+=		crossterm-${CROSSTERM_REV}.tar.gz
-DISTFILES+=		ratatui-${RATATUI_REV}.tar.gz
-DISTFILES+=		wezterm-${WEZTERM_REV}.tar.gz
-DISTFILES+=		tokio-tungstenite-${TOKIO_TUNGSTENITE_REV}.tar.gz
-DISTFILES+=		tungstenite-${TUNGSTENITE_REV}.tar.gz
+RUST_REQ=	1.99
 
-SITES.crossterm-${CROSSTERM_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=nornagon/}crossterm/archive/${CROSSTERM_REV}.tar.gz
-SITES.ratatui-${RATATUI_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=nornagon/}ratatui/archive/${RATATUI_REV}.tar.gz
-SITES.wezterm-${WEZTERM_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=pakrym/}wezterm/archive/${WEZTERM_REV}.tar.gz
-SITES.tokio-tungstenite-${TOKIO_TUNGSTENITE_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=JakkuSakura/}tokio-tungstenite/archive/${TOKIO_TUNGSTENITE_REV}.tar.gz
-SITES.tungstenite-${TUNGSTENITE_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=JakkuSakura/}tungstenite-rs/archive/${TUNGSTENITE_REV}.tar.gz
+# codex finds codex-code-mode-host next to itself; GPT models need it.
+CARGO_ARGS=	build --release -p codex-cli -p codex-code-mode-host \
+		${DEFAULT_CARGO_ARGS}
+
+# Crates from git, not crates.io (user name revision);
+# patch-codex-rs_Cargo.toml points at their extracted archives.
+GIT_CRATES=	openai-oss-forks crossterm ed1cdab335221515706178d68495bba2aed1924f
+GIT_CRATES+=	openai-oss-forks tokio-tungstenite 0e5b2d73aa18dd9f0a50ee9ff199d5aef7594186
+GIT_CRATES+=	openai-oss-forks tungstenite-rs 4fffad30fe373adbdcffab9545e9e9bf4f2fc19f
+GIT_CRATES+=	hyperium h3 e07e69412876f7e26f026bd75a48b2704d8c8283
+GIT_CRATES+=	microsoft mxc b21120168d70befe12356411423266bfef168446
+GIT_CRATES+=	helix-editor nucleo 4253de9faabb4e5c6d81d946a5e35a90f87347ee
+GIT_CRATES+=	modelcontextprotocol rust-sdk 98a54789b80110ad210495c4ad845c89e1980471
+GIT_CRATES+=	dzbarsky rules_rust b56cbaa8465e74127f1ea216f813cd377295ad81
+
+DISTFILES=			${DEFAULT_DISTFILES}
+.for user name rev in ${GIT_CRATES}
+DISTFILES+=			${name}-${rev}.tar.gz
+GIT_CRATE_SITES.${name}=	${MASTER_SITE_GITHUB:=${user}/${name}/archive/${rev}.tar.gz}
+SITES.${name}-${rev}.tar.gz=	${GIT_CRATE_SITES.${name}:S,^,-,}
+.endfor
+
+# The v8 crate (codex-code-mode-host) wants a prebuilt sandboxed V8;
+# codex publishes it.  The build is offline, so fetch it as distfiles.
+V8_VERSION=	152.2.0
+V8_SITES=	${MASTER_SITE_GITHUB:=openai/codex/releases/download/rusty-v8-v${V8_VERSION}/}
+V8_TARGETS=	aarch64-apple-darwin x86_64-apple-darwin
+V8_TARGETS+=	aarch64-unknown-linux-gnu x86_64-unknown-linux-gnu
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+V8_TARGET=	${MACHINE_ARCH}-apple-darwin
+.else
+V8_TARGET=	${MACHINE_ARCH}-unknown-linux-gnu
+.endif
+V8_ARCHIVE=	librusty_v8_ptrcomp_sandbox_release_${V8_TARGET}.a.gz
+V8_BINDING=	src_binding_ptrcomp_sandbox_release_${V8_TARGET}.rs
+
+.for t in ${V8_TARGETS}
+.  if ${t} == ${V8_TARGET} || make(distinfo) || make(makesum) || make(mdi)
+DISTFILES+=						librusty_v8_ptrcomp_sandbox_release_${t}.a.gz
+DISTFILES+=						src_binding_ptrcomp_sandbox_release_${t}.rs
+SITES.librusty_v8_ptrcomp_sandbox_release_${t}.a.gz=	${V8_SITES}
+SITES.src_binding_ptrcomp_sandbox_release_${t}.rs=	${V8_SITES}
+.  endif
+.endfor
+
+EXTRACT_ONLY=	${DISTFILES:N*rusty_v8*:N*src_binding*}
+
+MAKE_ENV+=	RUSTY_V8_ARCHIVE=${DISTDIR}/${V8_ARCHIVE}
+MAKE_ENV+=	RUSTY_V8_SRC_BINDING_PATH=${DISTDIR}/${V8_BINDING}
 
 INSTALLATION_DIRS=	bin share/doc/codex
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/codex ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/../README.md ${DESTDIR}${PREFIX}/share/doc/codex
+.for f in codex codex-code-mode-host
+	${INSTALL_PROGRAM} ${CARGO_WRKSRC}/target/release/${f} ${DESTDIR}${PREFIX}/bin
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/codex
 
 .include "cargo-depends.mk"
 .include "../../lang/rust/cargo.mk"

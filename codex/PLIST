@@ -1,3 +1,4 @@
 @comment $NetBSD$
 bin/codex
+bin/codex-code-mode-host
 share/doc/codex/README.md
