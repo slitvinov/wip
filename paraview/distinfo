@@ -1,10 +1,12 @@
 $NetBSD$
 
-BLAKE2s (ParaView-v6.1.0.tar.gz) = b8015666e8038f317cb9641ca6aeedcee6803be9f6a0fd90bf7e87d0f5db375f
-SHA512 (ParaView-v6.1.0.tar.gz) = ff71ea9ce8041e976f9e9fcc57d77e0ac2290a839b337fa600d1b1fd0dccdbdce33ff64a5b4727e841ba9980bce61491f47d7fbff4c36f249e083d04d89b8c61
-Size (ParaView-v6.1.0.tar.gz) = 116488161 bytes
+BLAKE2s (ParaView-v6.2.0.tar.xz) = d0afe77b7dff1e7fb616f4c5d05e275658210f91bcbf9d34933b1220f55ee56c
+SHA512 (ParaView-v6.2.0.tar.xz) = fb6afff288013fa2e987d5389f36eec7a7f174195fec06defb1164147af64a54dcd03e7c99854e0e5769dbde1403c881625d55db24f43126720f78e3f1435567
+Size (ParaView-v6.2.0.tar.xz) = 100726860 bytes
+SHA1 (patch-CMake_ParaViewPlugin.cmake) = 00dad875c181a9c2b09964b7f6b7df040ccaac29
 SHA1 (patch-Qt_Core_pqServerConfiguration.cxx) = 13650d27176d82f812dc92e441f42de02b070462
-SHA1 (patch-VTK_ThirdParty_ioss_vtkioss_Ioss__FileInfo.C) = bf67392b98a7480df15e6ef8da5c30cd75ab8856
+SHA1 (patch-VTK_Rendering_RayTracing_RTWrapper_OSPRay_OSPRayBackend.h) = 25791c359ad0d96e35288203b90d45e47f67167a
+SHA1 (patch-VTK_ThirdParty_ioss_vtkioss_Ioss__FileInfo.C) = 0215e317c234bde667b40bc8d50c0ad870205d21
 SHA1 (patch-VTK_ThirdParty_loguru_vtkloguru_loguru.cpp) = 2827711be67aa8210fdb169dd5b6c49a7ed97174
-SHA1 (patch-VTK_ThirdParty_netcdf_vtknetcdf_libsrc_mmapio.c) = 0f170446fc9c2dad007d4d1f6935aa4d0f9b944a
+SHA1 (patch-VTK_ThirdParty_netcdf_vtknetcdf_libsrc_mmapio.c) = 59c863dc5ba09d0f651239ea714352c78b415f5f
 SHA1 (patch-VTK_ThirdParty_viskores_vtkviskores_viskores_viskores_thirdparty_loguru_viskoresloguru_loguru.cpp) = 4d59b97920388184cfcbe9d3a38c45ff939da27e

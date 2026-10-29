@@ -1,5 +1,8 @@
 $NetBSD$
 
+mremap(2) takes five arguments on NetBSD; keep the Linux prototype and
+call for Linux only.
+
 --- VTK/ThirdParty/netcdf/vtknetcdf/libsrc/mmapio.c.orig	2026-03-31 10:30:33.000000000 +0000
 +++ VTK/ThirdParty/netcdf/vtknetcdf/libsrc/mmapio.c
 @@ -42,7 +42,7 @@

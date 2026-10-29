@@ -1,0 +1,22 @@
+wip/paraview: update to 6.2.0; enable Qt6, Python, MPI and OSPRay
+
+Build the Qt6 GUI, Python (pvpython/pvbatch with NumPy), MPI (via
+mk/mpi.buildlink3.mk), OSPRay ray tracing (wip/ospray), Viskores with
+the TBB backend (TBB is also the VTK SMP backend), FFmpeg (ffmpeg7)
+movie writing, XDMF2/3, CGNS and the VisIt readers.  Take expat,
+freetype, jpeg, libxml2, lz4, xz, png, tiff, zlib and eigen from
+pkgsrc; HDF5, NetCDF, CGNS, Exodus and IOSS stay bundled.
+
+On Darwin the GUI is installed as ${PREFIX}/Applications/paraview.app
+with a launcher in bin, rendering through Cocoa/OpenGL (Apple's
+OpenGL 4.1 on Metal); X11 libraries are only used elsewhere.
+
+New patches:
+- give plugin libraries an absolute install name instead of
+  @loader_path, which pkg_add cannot resolve in REQUIRES;
+- disable OSPRay 3.2 MIP-map generation, which made scalar colouring
+  (VTK's 258x2 colour-map texture) banded and washed out.
+The ioss statvfs patch is now NetBSD-only (it broke Darwin).
+
+Catalyst (catalyst library not packaged), the web/wslink support and
+the WebGPU backend (VTK needs Dawn, not wgpu-native) stay off.
