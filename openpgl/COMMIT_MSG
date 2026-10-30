@@ -1,0 +1,5 @@
+graphics/openpgl: Add openpgl version 0.7.1
+
+Intel Open Path Guiding Library implements path guiding for Monte
+Carlo renderers (learned incident radiance used to guide directional
+sampling). Used by Blender's Cycles for path guiding.

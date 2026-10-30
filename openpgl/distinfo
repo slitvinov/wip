@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (openpgl-0.7.1.tar.gz) = 40e90289870eb189458ffc9f0c50a10e1a822ebce6e9310aa706089d0b204d09
+SHA512 (openpgl-0.7.1.tar.gz) = 0aa86d28d4e611c873dd587911cf6ab74e3d6706194fbd7b8abe2587579eb590113ff82beb58386565ac72ef4fd5f7e3ec6b8d5a6b0dd3e2f8ec39cd1fa1a237
+Size (openpgl-0.7.1.tar.gz) = 11078288 bytes

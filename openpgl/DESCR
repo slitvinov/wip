@@ -1,0 +1,5 @@
+Intel Open Path Guiding Library (Intel Open PGL) implements path
+guiding methods for Monte Carlo renderers. It learns an approximation
+of the incident light field during rendering and uses it to guide
+directional sampling, reducing noise in scenes with difficult indirect
+lighting. It is used by Blender's Cycles renderer.
