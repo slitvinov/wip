@@ -1,0 +1,5 @@
+Ceres Solver is a C++ library for modeling and solving large,
+complicated optimization problems: non-linear least squares with
+bounds constraints, and general unconstrained optimization. It is
+used for bundle adjustment and camera calibration, for example by
+Blender's libmv motion tracker to solve camera motion.

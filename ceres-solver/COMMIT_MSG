@@ -1,0 +1,7 @@
+math/ceres-solver: Add ceres-solver version 2.2.0.20251205
+
+Ceres Solver is a library for non-linear least squares and general
+optimization problems. This is the development snapshot Blender 5.2
+builds against (commit 0c70ed3a, after 2.2.0), which uses Abseil
+instead of glog. Built with Eigen for dense and sparse linear
+algebra; without SuiteSparse, LAPACK, Accelerate sparse and CUDA.
