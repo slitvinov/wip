@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/meshoptimizer.h
+lib/cmake/meshoptimizer/meshoptimizerConfig.cmake
+lib/cmake/meshoptimizer/meshoptimizerConfigVersion.cmake
+lib/cmake/meshoptimizer/meshoptimizerTargets-release.cmake
+lib/cmake/meshoptimizer/meshoptimizerTargets.cmake
+lib/libmeshoptimizer.so

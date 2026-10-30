@@ -1,0 +1,5 @@
+meshoptimizer is a mesh optimization library that makes meshes smaller
+and faster to render: vertex cache, overdraw and vertex fetch
+optimization, mesh simplification, and vertex/index buffer compression
+as used by the glTF EXT_meshopt_compression extension. Blender's glTF
+add-on uses it to compress and decompress meshes.

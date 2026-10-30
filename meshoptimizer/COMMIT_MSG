@@ -1,0 +1,5 @@
+graphics/meshoptimizer: Add meshoptimizer version 1.1
+
+Mesh optimization and compression library (vertex cache/overdraw
+optimization, simplification, EXT_meshopt_compression codecs). Used
+by Blender's glTF add-on.
