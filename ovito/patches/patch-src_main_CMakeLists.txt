@@ -1,0 +1,22 @@
+$NetBSD$
+
+Only copy Qt and all other dependency libraries into the app bundle
+(FixupMacBundle.cmake) for redistributable packages.  A pkgsrc build
+uses the installed libraries in place; the bundle fixup would copy
+them and rewrite their install names.
+
+--- src/main/CMakeLists.txt.orig
++++ src/main/CMakeLists.txt
+@@ -183,8 +183,10 @@
+     # Copy the application icon into the resource directory.
+     INSTALL(FILES "resources/ovito.icns" DESTINATION "${OVITO_RELATIVE_SHARE_DIRECTORY}")
+ 
+-    # Fix Mac app bundle.
+-    INCLUDE("${Ovito_SOURCE_DIR}/cmake/FixupMacBundle.cmake")
++    # Fix Mac app bundle (copies Qt and all other libraries into it).
++    IF(OVITO_REDISTRIBUTABLE_PACKAGE)
++        INCLUDE("${Ovito_SOURCE_DIR}/cmake/FixupMacBundle.cmake")
++    ENDIF()
+ 
+ ENDIF()
+ 

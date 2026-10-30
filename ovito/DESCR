@@ -1,0 +1,11 @@
+OVITO (Open Visualization Tool) is a scientific visualization and
+analysis program for atomistic, molecular and other particle-based
+simulation data, e.g. from LAMMPS, GROMACS or SPH codes.  It reads
+many file formats, offers a modifier pipeline for analysis (structure
+identification, cluster analysis, dislocation analysis, Voronoi
+tessellation, ...), and renders images and movies with its real-time
+renderer, which uses Metal on macOS and Vulkan elsewhere through Qt's
+RHI.
+
+This is the open-source code base of OVITO Basic; the Python module
+and the Pro-only features are not included.

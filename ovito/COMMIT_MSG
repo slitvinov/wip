@@ -1,0 +1,21 @@
+wip/ovito: Import ovito-3.17.1
+
+OVITO (Open Visualization Tool) visualizes and analyses atomistic,
+molecular and other particle-based simulation data.  This is the
+open-source code base of OVITO Basic, built from the 3.17.1 release
+commit on gitlab.com/stuko/ovito (the release is not tagged there).
+
+Builds the Qt6 desktop application with all open-source plugins and
+the real-time "standard" renderer (Qt RHI; Metal on macOS, Vulkan
+elsewhere), which replaced the OpenGL renderer in 3.16.  FFmpeg video
+output (ffmpeg7), NetCDF/HDF5, SQLite and the libssh client come from
+pkgsrc; zstd 1.5.7 is built from the bundled sources as upstream
+requires (its zlib wrapper is not installed by archivers/zstd).
+
+The Python module (PyScript) and the Tachyon, OSPRay, VisRTX and ANARI
+renderers are proprietary OVITO Pro components and are not in the
+source repository.
+
+On Darwin the GUI is installed as ${PREFIX}/Applications/Ovito.app with
+a launcher in bin; the bundle fixup that copies Qt into the bundle is
+skipped, and the @rpath install names are made absolute after install.
