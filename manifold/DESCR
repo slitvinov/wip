@@ -1,0 +1,4 @@
+Manifold is a geometry library for robust, fast boolean operations
+(union, difference, intersection) on triangle meshes. Its results are
+guaranteed to be manifold (watertight) when the inputs are. Blender
+uses it as the "Manifold" solver of the Boolean modifier and node.

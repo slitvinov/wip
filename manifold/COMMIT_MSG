@@ -1,0 +1,6 @@
+graphics/manifold: Add manifold version 3.5.2
+
+Library for robust and fast boolean operations on triangle meshes,
+guaranteed to produce manifold output. Used by Blender's "Manifold"
+boolean solver. Built with the TBB parallel backend and without 2D
+cross sections (which need Clipper2).
