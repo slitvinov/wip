@@ -752,6 +752,8 @@ Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/io
 Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/io_scene_gltf2/io/imp/gltf2_io_binary_meshopt.py
 Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/io_scene_gltf2/io/imp/gltf2_io_gltf.py
 Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/io_scene_gltf2/io/imp/user_extensions.py
+${PLIST.draco}Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+${PLIST.meshoptimizer}Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
 Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/node_wrangler/README.md
 Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/node_wrangler/__init__.py
 Applications/Blender.app/Contents/Resources/${BLENDERVER}/scripts/addons_core/node_wrangler/interface.py

@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	blender-5.2.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -53,13 +54,10 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_CYCLES=ON
 
 # Not available in pkgsrc (yet).
 CMAKE_CONFIGURE_ARGS+=	-DWITH_CYCLES_OSL=OFF		# OpenShadingLanguage
-CMAKE_CONFIGURE_ARGS+=	-DWITH_CYCLES_PATH_GUIDING=OFF	# OpenPGL
 CMAKE_CONFIGURE_ARGS+=	-DWITH_USD=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_HYDRA=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_MATERIALX=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_XR_OPENXR=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_DRACO=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_MESHOPTIMIZER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_TRACY=OFF
 
 PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:R}
@@ -91,16 +89,11 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_BLENDER_THUMBNAILER=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOPENAL_INCLUDE_DIR=${BUILDLINK_DIR}/include/AL
 CMAKE_CONFIGURE_ARGS+=	-DOPENAL_LIBRARY=${BUILDLINK_DIR}/lib/libopenal.dylib
 LDFLAGS.Darwin+=	-Wl,-headerpad_max_install_names
-# Ceres is no longer bundled and not in pkgsrc.
-CMAKE_CONFIGURE_ARGS+=	-DWITH_LIBMV=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_MANIFOLD=OFF
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_INSTALL_PORTABLE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SDL_DYNLOAD=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_EIGEN=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_FREETYPE=ON
-CMAKE_CONFIGURE_ARGS+=	-DWITH_LIBMV=OFF
-CMAKE_CONFIGURE_ARGS+=	-DWITH_MANIFOLD=OFF
 # uses alloca() but sets -std=c++17
 FORCE_CXX_STD=		gnu++20
 .endif
@@ -144,6 +137,15 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/Applications/Blender.app
 	${MV} ${DESTDIR}${PREFIX}/Blender.app ${DESTDIR}${PREFIX}/Applications/
 	${INSTALL_SCRIPT} ${WRKDIR}/blender.sh ${DESTDIR}${PREFIX}/bin/blender
+# The glTF add-on dlopen()s its Draco/meshoptimizer bridge libraries by
+# path; give them absolute install names instead of @rpath/..., which
+# pkgsrc would otherwise record as unresolvable required libraries.
+.  for l in draco meshopt
+	f=${PREFIX}/Applications/Blender.app/Contents/Resources/${PKGVERSION_NOREV:R}/scripts/addons_core/io_scene_gltf2/libbf_intern_${l}_bridge.dylib; \
+	if ${TEST} -f ${DESTDIR}$$f; then \
+		install_name_tool -id $$f ${DESTDIR}$$f; \
+	fi
+.  endfor
 .endif
 
 .include "options.mk"

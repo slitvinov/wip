@@ -6,5 +6,7 @@ Size (blender-5.2.2.tar.xz) = 93671672 bytes
 SHA1 (patch-build__files_cmake_platform_platform__apple.cmake) = e9dc67e71b7c2197fda90b72912fd0ac494200c5
 SHA1 (patch-build__files_cmake_platform_platform__unix.cmake) = 8e3d04b1147e22bf074615ab8c235cb1b084557e
 SHA1 (patch-intern_dualcon_intern_octree.cpp) = 72d3dd80b9c1392669bd09f54705f0287bce3140
+SHA1 (patch-intern_libmv_libmv_multiview_euclidean__resection.cc) = 4561d1e687da886a7170a6a79dd542d2edf7a1bb
+SHA1 (patch-intern_libmv_libmv_tracking_track__region.cc) = 914f78e2b6bb02707e0561deef396aa3c63ad396
 SHA1 (patch-source_blender_python_intern_bpy__interface.cc) = 15e219408ec13347fecc919b3bfa08a8d9f55572
 SHA1 (patch-source_creator_CMakeLists.txt) = 379285dd62ec368adb2cf6ef12c26d310a20b5cf
