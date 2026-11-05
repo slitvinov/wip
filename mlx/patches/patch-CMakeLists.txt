@@ -1,0 +1,68 @@
+$NetBSD$
+
+Add MLX_METAL_RUNTIME_COMPILE: build without the offline metal compiler,
+which only ships with Xcode.  The Metal version is derived from the
+deployment target instead of being probed with `xcrun metal`, and the
+JIT kernels are enabled.
+
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -42,6 +42,8 @@ option(MLX_BUILD_GGUF "Include support for GGUF format" ON)
+ option(MLX_BUILD_SAFETENSORS "Include support for safetensors format" ON)
+ option(MLX_BUILD_PYTHON_STUBS "Build stub files for python bindings" ON)
+ option(MLX_METAL_JIT "Use JIT compilation for Metal kernels" OFF)
++option(MLX_METAL_RUNTIME_COMPILE
++       "Compile all Metal kernels at runtime (no offline metal compiler)" OFF)
+ option(MLX_USE_CCACHE "Use CCache for compilation cache when available" ON)
+ option(MLX_EXPORT_ALL_SYMBOLS "Export all symbols in the library" OFF)
+ option(BUILD_SHARED_LIBS "Build mlx as a shared library" OFF)
+@@ -166,6 +168,11 @@ if(MLX_BUILD_CUDA)
+   endif()
+ endif()
+ 
++if(MLX_METAL_RUNTIME_COMPILE)
++  # Runtime compilation builds on the JIT kernel sources.
++  set(MLX_METAL_JIT ON)
++endif()
++
+ if(MLX_BUILD_METAL)
+   find_library(METAL_LIB Metal)
+   find_library(FOUNDATION_LIB Foundation)
+@@ -214,13 +221,30 @@ if(MLX_BUILD_METAL)
+     message(STATUS "Building for macOS ${CMAKE_OSX_DEPLOYMENT_TARGET}")
+ 
+     # Get Metal version.
+-    set(XCRUN_FLAGS "-mmacosx-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}")
+-    execute_process(
+-      COMMAND
+-        zsh "-c"
+-        "echo \"__METAL_VERSION__\" | xcrun -sdk macosx metal ${XCRUN_FLAGS} -E -x metal -P - | tail -1"
+-      OUTPUT_VARIABLE MLX_METAL_VERSION
+-      OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
++    if(MLX_METAL_RUNTIME_COMPILE)
++      # Without the offline metal compiler, __METAL_VERSION__ cannot be
++      # probed.  Derive it from the deployment target instead, matching
++      # get_metal_version() in device.cpp, which selects the same language
++      # version for the runtime compiler.  It can be overridden with
++      # -DMLX_METAL_VERSION=...
++      if(NOT MLX_METAL_VERSION)
++        if(CMAKE_OSX_DEPLOYMENT_TARGET VERSION_GREATER_EQUAL 26.0)
++          set(MLX_METAL_VERSION 400)
++        elseif(CMAKE_OSX_DEPLOYMENT_TARGET VERSION_GREATER_EQUAL 15.0)
++          set(MLX_METAL_VERSION 320)
++        else()
++          set(MLX_METAL_VERSION 310)
++        endif()
++      endif()
++    else()
++      set(XCRUN_FLAGS "-mmacosx-version-min=${CMAKE_OSX_DEPLOYMENT_TARGET}")
++      execute_process(
++        COMMAND
++          zsh "-c"
++          "echo \"__METAL_VERSION__\" | xcrun -sdk macosx metal ${XCRUN_FLAGS} -E -x metal -P - | tail -1"
++        OUTPUT_VARIABLE MLX_METAL_VERSION
++        OUTPUT_STRIP_TRAILING_WHITESPACE COMMAND_ERROR_IS_FATAL ANY)
++    endif()
+     message(STATUS "Metal version: ${MLX_METAL_VERSION}")
+   else()
+     set(MLX_METAL_VERSION 0)

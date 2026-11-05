@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	mlx
+
+.if !defined(MLX_BUILDLINK3_MK)
+MLX_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.mlx+=	mlx>=0.32.4
+BUILDLINK_PKGSRCDIR.mlx?=	../../wip/mlx
+.endif	# MLX_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-mlx

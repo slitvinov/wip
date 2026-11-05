@@ -1,0 +1,11 @@
+MLX is an array framework for machine learning on Apple silicon, from
+Apple machine learning research.  It has a NumPy-like API, composable
+function transformations (automatic differentiation, vectorization,
+graph compilation), lazy evaluation, and a unified memory model: arrays
+live in shared memory and operations run on the CPU or the GPU without
+copies.
+
+This package provides the C++ library, headers and CMake configuration.
+The Metal GPU kernels are compiled at run time from source through the
+Metal API, so no offline Metal shader compiler (Xcode) is needed to
+build it.

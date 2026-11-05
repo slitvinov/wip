@@ -1,0 +1,16 @@
+wip/mlx: Import mlx-0.32.4
+
+MLX is Apple's NumPy-like array framework for machine learning on
+Apple silicon, with lazy evaluation, automatic differentiation and a
+Metal GPU backend.  This package holds the C++ library.
+
+Command Line Tools lack the offline metal shader compiler, which MLX
+uses even in JIT mode for its version probe, its JIT source generation
+and 13 always-precompiled kernel files.  A patched-in option,
+MLX_METAL_RUNTIME_COMPILE, removes that need.  It embeds those kernel
+sources and compiles them at run time through the Metal API, so no
+mlx.metallib is installed.
+
+A second patch fixes an upstream bug in JIT mode.  The head-dim split
+NAX attention kernel got one template argument too many, so it failed
+to compile for head dims 256 and 512.
