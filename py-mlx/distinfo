@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (mlx-0.32.4.tar.gz) = c1ad48fc163b3809896d5792499aaf483b986aa5e029ae844e72037a8a537c0d
+SHA512 (mlx-0.32.4.tar.gz) = 047af4ac2fb28ee27bb61e2ec391bcae641fa9860733dcedfcc4bbe16705b05eed11c4173086dadfcfc084711481f49dcf50f0dccb81feb0a5c3fed2a682ee27
+Size (mlx-0.32.4.tar.gz) = 4535793 bytes

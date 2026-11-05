@@ -1,0 +1,8 @@
+MLX is an array framework for machine learning on Apple silicon, from
+Apple machine learning research.  It has a NumPy-like API, composable
+function transformations (automatic differentiation, vectorization,
+graph compilation), lazy evaluation, and a unified memory model.
+
+This package provides the Python API: mlx.core (arrays, operations,
+mx.grad, mx.compile, mx.fft, mx.linalg, mx.random, mx.fast), mlx.nn
+(neural network layers and losses) and mlx.optimizers.

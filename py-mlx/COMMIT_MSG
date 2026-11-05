@@ -1,0 +1,9 @@
+wip/py-mlx: Import mlx-0.32.4
+
+These are the Python bindings for MLX, Apple's array framework for
+machine learning on Apple silicon: mlx.core, mlx.nn and mlx.optimizers.
+
+Only the nanobind extension is built, from a small CMake project in
+files/, and it links against the C++ library from wip/mlx.  setup.py
+would otherwise build the whole library a second time inside the
+Python package.
