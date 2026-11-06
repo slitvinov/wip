@@ -1,0 +1,12 @@
+wip/materialx: Import materialx-1.39.5
+
+MaterialX is an open standard for exchanging material and look
+development content; OpenUSD and Blender use it.  Shared C++
+libraries, the data library, GLSL/MSL/OSL/MDL/Slang shader
+generators, the GLSL and Metal render modules (MSL is compiled at run
+time through the Metal API), OpenImageIO support and PyMaterialX.
+
+The data library goes to share/MaterialX/libraries, with a fallback
+search path patched into the C++ library and a link from the Python
+package.  The viewer and graph editor need git submodules that are not
+in the release tarball, so they are not built.

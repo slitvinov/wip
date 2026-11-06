@@ -1,0 +1,16 @@
+$NetBSD$
+
+Do not install a second copy of the data library inside the Python
+package; pkgsrc links it to share/MaterialX/libraries instead.
+
+--- libraries/CMakeLists.txt.orig
++++ libraries/CMakeLists.txt
+@@ -66,7 +66,7 @@
+             PATTERN "CMakeLists.txt" EXCLUDE)
+ endif()
+ 
+-if(MATERIALX_BUILD_PYTHON)
++if(MATERIALX_BUILD_PYTHON AND SKBUILD)
+     set(MATERIALX_PYTHON_LIBRARIES_PATH "${MATERIALX_PYTHON_FOLDER_NAME}/${MATERIALX_INSTALL_STDLIB_PATH}")
+     if(SKBUILD)
+         set(MATERIALX_PYTHON_LIBRARIES_PATH "${SKBUILD_PLATLIB_DIR}/MaterialX/libraries")

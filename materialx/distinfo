@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (MaterialX-1.39.5.tar.gz) = dd2450456a771ee5ed86eff574aa625ea7475f072d50528e15dd55d3d99d2bf1
+SHA512 (MaterialX-1.39.5.tar.gz) = a9af568dd2918a2679de1727295178a3155cb63a1b1a58eec0ff2bf804031e716918c036546916cfdab2ef1fcbe3cc2edc34037a082f7a50f0c6852236b8e449
+Size (MaterialX-1.39.5.tar.gz) = 115112028 bytes
+SHA1 (patch-CMakeLists.txt) = 66b0cac7ecb6966457b12654eac8607a882a5a0e
+SHA1 (patch-libraries_CMakeLists.txt) = 9328b8a49a6799d1160e8239bfb2d6d8b7383648
+SHA1 (patch-python_CMakeLists.txt) = a3bdbe011c27192ff9bad7114f48de5a742284bb
+SHA1 (patch-source_MaterialXFormat_Util.cpp) = 4ca5de64acea9151300424b9c1a97337e947d641

@@ -1,0 +1,9 @@
+MaterialX is an open standard for representing rich material and
+look-development content in computer graphics, enabling its exchange
+between applications and renderers.  It is used by OpenUSD, Blender,
+Houdini, Maya and many renderers.
+
+This package provides the C++ libraries, the standard data library
+(node definitions and implementations), shader generators for GLSL,
+MSL (Metal), OSL, MDL and Slang, the GLSL and Metal render modules,
+OpenImageIO image loading, and the PyMaterialX Python bindings.

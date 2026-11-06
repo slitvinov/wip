@@ -1,0 +1,16 @@
+$NetBSD$
+
+Install the pure-Python part of the MaterialX package into the same
+directory as the extension modules (site-packages), and do not install
+the example scripts into PREFIX/python.
+
+--- python/CMakeLists.txt.orig
++++ python/CMakeLists.txt
+@@ -1,6 +1,5 @@
+ if(NOT SKBUILD)
+-  install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/MaterialX" DESTINATION "python" MESSAGE_NEVER)
+-  install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/Scripts" DESTINATION "python" MESSAGE_NEVER)
++  install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/MaterialX/" DESTINATION "${MATERIALX_PYTHON_FOLDER_NAME}" MESSAGE_NEVER)
+ endif()
+ 
+ if(SKBUILD)
