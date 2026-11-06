@@ -1,0 +1,14 @@
+wip/openusd: Import openusd-26.08
+
+OpenUSD (Universal Scene Description) for 3D scene interchange and
+composition, with Hydra.  Built with Python bindings, imaging and
+UsdImaging, Hydra Storm on Metal (HgiMetal compiles its shaders at run
+time) and OpenGL, the Embree Hydra renderer, MaterialX support, and
+the Alembic, Draco, OpenImageIO, OpenColorIO, OpenVDB and Ptex
+plugins.  usdview is not built (needs PySide6); usdrecord needs
+PySide6 for its GL context, but UsdAppUtils.FrameRecorder renders
+with Storm (Metal) and Embree without it.
+
+Patched to install plugins in lib/usd/plugin and the CMake package
+config in lib/cmake/pxr instead of top-level PREFIX directories.
+Legacy .pyc files written next to the Python sources are removed.

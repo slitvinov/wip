@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (OpenUSD-26.08.tar.gz) = 70c9fdde7924052a456636bc946908548e01fd386650d4258b097865a4ab9913
+SHA512 (OpenUSD-26.08.tar.gz) = 82f7bb4f77b295be79cd36f591f242276d36c0d589b0fca383344c27e70daf7e29151bf587528bb2fc2b2a8b974387a253993ace3caf5f79ae70f9ebbc71cf1a
+Size (OpenUSD-26.08.tar.gz) = 158807126 bytes
+SHA1 (patch-cmake_macros_Private.cmake) = 50fe273125a928ef8044e85db4d0a1a6d79c86b0
+SHA1 (patch-cmake_macros_Public.cmake) = b8123be06abb1b1eeafd260e816d7bbf1e715a5f
+SHA1 (patch-pxr_CMakeLists.txt) = de1c1bf35a7e9089d83c76021dd9033b5387c4bb
+SHA1 (patch-pxr_pxrConfig.cmake.in) = 6ecb351ce2ea9c135bda3a54499e5c33188b6755

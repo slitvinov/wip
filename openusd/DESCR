@@ -1,0 +1,13 @@
+Universal Scene Description (OpenUSD), originally developed by Pixar,
+is a framework for interchange of 3D computer graphics data.  It
+provides scene description with layering, referencing and variants for
+non-destructive composition, a fast scalable runtime, schemas for
+geometry, shading (UsdShade, MaterialX), lights, physics and skeletal
+animation, and Hydra, a rendering architecture with the Storm
+real-time renderer.
+
+This package includes the C++ libraries, Python bindings (pxr), the
+command line tools (usdcat, usdchecker, usdrecord, usdzip, ...), Hydra
+Storm on Metal (macOS) or OpenGL, the Embree Hydra renderer, and
+plugins for Alembic, Draco, OpenImageIO, OpenColorIO, OpenVDB, Ptex
+and MaterialX.  usdview is not included.
