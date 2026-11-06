@@ -1,0 +1,12 @@
+Polyscope is a C++/Python viewer and user interface for 3D data such
+as meshes, point clouds, curve networks, volume meshes and grids,
+camera views and Gaussian splats.  It registers data structures with
+scalar, vector and color quantities and shows them in an interactive
+OpenGL window with an ImGui interface, with minimal code:
+
+	import polyscope as ps
+	ps.init()
+	ps.register_surface_mesh("mesh", vertices, faces)
+	ps.show()
+
+On macOS the OpenGL renderer runs on the Apple GPU through Metal.

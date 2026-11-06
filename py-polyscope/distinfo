@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (polyscope-2.6.1.tar.gz) = bd607bd965f06ecb6ef66977bf65cea831bd8a7c0d5cd7ca10bedb216de6fdeb
+SHA512 (polyscope-2.6.1.tar.gz) = 22279feb130962559df4ac4d2e357137174b5131b1e508652cfa81e4fe8337d6c99279fe5d542ac6946139eebb400171ae4cc4de160bde5ad237d983afb4b6cd
+Size (polyscope-2.6.1.tar.gz) = 16946275 bytes
+SHA1 (patch-deps_polyscope_src_CMakeLists.txt) = 04f7c8381b78f81a86996c59a290b9a1e0c689d0

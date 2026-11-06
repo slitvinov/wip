@@ -1,0 +1,8 @@
+wip/py-polyscope: Import polyscope-2.6.1
+
+Polyscope is a viewer and user interface for 3D data (meshes, point
+clouds, curve networks, volume grids, Gaussian splats) with Python
+bindings.  Built from the PyPI sdist, which bundles the C++ library
+and its dependencies (GLFW, glad, ImGui, glm, Eigen, nanobind); they
+are linked statically into the extension.  On macOS it renders with
+OpenGL 4.1 on Metal (Apple GPU).
