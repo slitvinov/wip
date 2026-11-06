@@ -1,0 +1,9 @@
+Taichi Lang is a domain-specific language embedded in Python for
+high-performance parallel programming.  Python functions decorated
+with @ti.kernel are compiled just in time and run in parallel on the
+GPU, which makes it suited to physical simulation, numerical
+computation, computer graphics and visual computing.
+
+This package builds the Metal backend (ti.init(arch=ti.metal)) for
+the Apple GPU; kernels are compiled to SPIR-V, translated to Metal
+Shading Language and compiled at run time.

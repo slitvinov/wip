@@ -1,0 +1,13 @@
+wip/py-taichi: Import taichi-1.7.4
+
+Taichi Lang is a Python-embedded language for parallel numerical
+computation.  Only the Metal backend is built (TI_WITH_LLVM=OFF): the
+LLVM-based CPU/CUDA backends need LLVM 15, which pkgsrc lacks.  Kernels
+are compiled to SPIR-V, translated to MSL with SPIRV-Cross and compiled
+at run time by Metal; a SAXPY test runs at about 265 GB/s on the M5
+Pro.  The GGUI (Vulkan) window system is not built; ti.GUI works.
+
+Pinned git submodules are fetched as GITHUB_SUBMODULES; Eigen comes
+from math/eigen3.  The bundled SPIRV-Tools/SPIRV-Cross are not
+installed, -Werror is dropped, and the upstream build.py is renamed so
+it does not shadow the PEP 517 "build" module.
