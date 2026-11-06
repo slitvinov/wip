@@ -1,7 +1,8 @@
 $NetBSD$
 
 pxrConfig.cmake now lives in lib/cmake/pxr: derive the prefix and the
-targets file location from that.
+targets file location from that.  Also find OpenGL and Ptex, whose
+imported targets the imaging libraries link to.
 
 --- pxr/pxrConfig.cmake.in.orig
 +++ pxr/pxrConfig.cmake.in
@@ -14,11 +15,19 @@ targets file location from that.
  
  set(PXR_MAJOR_VERSION "@PXR_MAJOR_VERSION@")
  set(PXR_MINOR_VERSION "@PXR_MINOR_VERSION@")
-@@ -115,7 +115,7 @@
+@@ -115,7 +115,15 @@
      find_dependency(@PXR_WORK_IMPL_PACKAGE@)
  endif()
  
 -include("${PXR_CMAKE_DIR}/cmake/pxrTargets.cmake")
++# Imported targets used by the imaging libraries.
++if(@PXR_ENABLE_GL_SUPPORT@)
++    find_dependency(OpenGL)
++endif()
++if(@PXR_ENABLE_PTEX_SUPPORT@)
++    find_dependency(Ptex CONFIG)
++endif()
++
 +include("${CMAKE_CURRENT_LIST_DIR}/pxrTargets.cmake")
  if (TARGET usd_m)
      set(libs "usd_m")

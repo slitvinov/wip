@@ -2,7 +2,7 @@
 
 DISTNAME=	OpenUSD-26.08
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PixarAnimationStudios/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -57,6 +57,14 @@ LDFLAGS.Darwin+=	-Wl,-headerpad_max_install_names
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	pxr/usd/bin/*/*.py
 REPLACE_PYTHON+=	pxr/usd/usd/usdGenSchema.py
+
+# The CMake package files record buildlink paths of dependencies.
+SUBST_CLASSES+=		bl
+SUBST_STAGE.bl=		post-build
+SUBST_MESSAGE.bl=	Replacing buildlink paths in the CMake package files.
+SUBST_FILES.bl=		${CMAKE_BUILD_DIR}/pxrConfig.cmake
+SUBST_FILES.bl+=	${CMAKE_BUILD_DIR}/pxr/CMakeFiles/Export/*/pxrTargets.cmake
+SUBST_SED.bl=		-e 's,${BUILDLINK_DIR},${PREFIX},g'
 
 # USD installs legacy (non-__pycache__) .pyc files next to the sources.
 post-install:
