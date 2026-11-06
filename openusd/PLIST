@@ -2490,11 +2490,6 @@ lib/usd/usdMedia/resources/generatedSchema.usda
 lib/usd/usdMedia/resources/plugInfo.json
 lib/usd/usdMedia/resources/usdMedia/schema.usda
 lib/usd/usdMtlx/resources/generatedSchema.usda
-lib/usd/usdMtlx/resources/libraries/stdlib/genosl/include/color4.h
-lib/usd/usdMtlx/resources/libraries/stdlib/genosl/include/matrix33.h
-lib/usd/usdMtlx/resources/libraries/stdlib/genosl/include/mx_funcs.h
-lib/usd/usdMtlx/resources/libraries/stdlib/genosl/include/vector2.h
-lib/usd/usdMtlx/resources/libraries/stdlib/genosl/include/vector4.h
 lib/usd/usdMtlx/resources/plugInfo.json
 lib/usd/usdMtlx/resources/usdMtlx/schema.usda
 lib/usd/usdPhysics/resources/generatedSchema.usda

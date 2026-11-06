@@ -1,0 +1,20 @@
+$NetBSD$
+
+Allow pointing usdMtlx at the installed MaterialX data library
+(PXR_MATERIALX_STDLIB_INSTALL_DIR) instead of the build-time location,
+which is pkgsrc's buildlink directory, and then do not copy a partial
+second copy of the library into the plugin resources.
+
+--- pxr/usd/usdMtlx/CMakeLists.txt.orig
++++ pxr/usd/usdMtlx/CMakeLists.txt
+@@ -2,7 +2,9 @@
+ set(PXR_PACKAGE usdMtlx)
+ 
+ set(MATERIALX_STDLIB_RESOURCES "")
+-if (MATERIALX_STDLIB_DIR)
++if (PXR_MATERIALX_STDLIB_INSTALL_DIR)
++    add_definitions(-DPXR_MATERIALX_STDLIB_DIR="${PXR_MATERIALX_STDLIB_INSTALL_DIR}")
++elseif (MATERIALX_STDLIB_DIR)
+     add_definitions(-DPXR_MATERIALX_STDLIB_DIR="${MATERIALX_STDLIB_DIR}")
+ 
+     # We copy the MaterialX standard library files out of the MaterialX 

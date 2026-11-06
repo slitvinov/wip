@@ -7,3 +7,4 @@ SHA1 (patch-cmake_macros_Private.cmake) = 50fe273125a928ef8044e85db4d0a1a6d79c86
 SHA1 (patch-cmake_macros_Public.cmake) = b8123be06abb1b1eeafd260e816d7bbf1e715a5f
 SHA1 (patch-pxr_CMakeLists.txt) = de1c1bf35a7e9089d83c76021dd9033b5387c4bb
 SHA1 (patch-pxr_pxrConfig.cmake.in) = 6ecb351ce2ea9c135bda3a54499e5c33188b6755
+SHA1 (patch-pxr_usd_usdMtlx_CMakeLists.txt) = 5a82bcf56df9aa585a1c31f01e2431e36403d18c
