@@ -1,0 +1,9 @@
+wip/f3d: Import f3d-4.0.1
+
+F3D is a fast and minimalist 3D viewer built on VTK, with the f3d
+application, the libf3d library and Python bindings.  Built with the
+ImGui, OpenEXR and WebP modules and the Alembic, Assimp, Draco, HDF
+(Exodus/VTKHDF), OpenCASCADE and USD (wip/openusd) plugins; the VDB
+plugin needs VTK's IOOpenVDB module, which graphics/vtk lacks.  Plain
+Unix layout instead of a macOS app bundle; rendering uses OpenGL 4.1
+on Metal.

@@ -1,0 +1,10 @@
+F3D is a fast and minimalist 3D viewer built on
+VTK.  It opens many 3D formats (glTF, OBJ, PLY, STL, VTK/VTU/VTP,
+3DS, FBX, DAE and others through Assimp, Alembic, Draco, STEP/IGES
+through OpenCASCADE, USD, Exodus and VTKHDF), renders them with
+physically based shading, image-based lighting, ambient occlusion and
+tone mapping, and can be driven from the command line to produce
+images and thumbnails.  It provides the f3d application, the libf3d
+C++ library and Python bindings.
+
+On macOS rendering uses OpenGL 4.1 on Metal (Apple GPU).

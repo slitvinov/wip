@@ -1,0 +1,16 @@
+$NetBSD$
+
+Without an application bundle on macOS, install the license files into
+share/doc/f3d as on other Unix systems, not into PREFIX.
+
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -316,7 +316,7 @@
+ # Installing licenses
+ set(F3D_LIC_DIR ".")
+ 
+-if (UNIX AND NOT APPLE AND NOT ANDROID)
++if (UNIX AND NOT ANDROID AND NOT F3D_MACOS_BUNDLE)
+   set(F3D_LIC_DIR ${CMAKE_INSTALL_DOCDIR})
+ endif()
+ 
