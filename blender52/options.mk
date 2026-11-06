@@ -2,9 +2,9 @@
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.blender52
 PKG_SUPPORTED_OPTIONS=		alembic draco embree jack libmv manifold meshoptimizer
-PKG_SUPPORTED_OPTIONS+=		oidn openpgl opensubdiv openvdb
+PKG_SUPPORTED_OPTIONS+=		materialx oidn openpgl opensubdiv openvdb usd
 PKG_SUGGESTED_OPTIONS=		alembic draco embree libmv manifold meshoptimizer
-PKG_SUGGESTED_OPTIONS+=		oidn openpgl opensubdiv openvdb
+PKG_SUGGESTED_OPTIONS+=		materialx oidn openpgl opensubdiv openvdb usd
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -76,6 +76,14 @@ PLIST.meshoptimizer=	yes
 CMAKE_CONFIGURE_ARGS+=	-DWITH_MESHOPTIMIZER=OFF
 .endif
 
+# MaterialX materials (USD export, shader nodes).
+.if !empty(PKG_OPTIONS:Mmaterialx)
+CMAKE_CONFIGURE_ARGS+=	-DWITH_MATERIALX=ON
+.include "../../wip/materialx/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DWITH_MATERIALX=OFF
+.endif
+
 # Intel Open Image Denoise (CPU; Metal device needs the Metal compiler).
 .if !empty(PKG_OPTIONS:Moidn)
 CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENIMAGEDENOISE=ON
@@ -107,6 +115,20 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_NANOVDB=ON
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENVDB=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_NANOVDB=OFF
+.endif
+
+# Universal Scene Description import/export and the Hydra render
+# delegate add-on (Storm on Metal).  OpenUSD is not built as a single
+# monolithic library; FindUSD.cmake is patched to link its libraries.
+.if !empty(PKG_OPTIONS:Musd)
+CMAKE_CONFIGURE_ARGS+=	-DWITH_USD=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_HYDRA=ON
+CMAKE_CONFIGURE_ARGS+=	-DPXR_LIB_PREFIX=usd_
+CMAKE_CONFIGURE_ARGS+=	-DUSD_ROOT_DIR=${BUILDLINK_DIR}
+.include "../../wip/openusd/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DWITH_USD=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_HYDRA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
