@@ -1,0 +1,7 @@
+splashsurf is a command-line tool to reconstruct surface meshes from
+particle data, typically from SPH (smoothed particle hydrodynamics)
+fluid simulations. It computes a level set of the SPH density field on
+a sparse grid and extracts a triangle mesh with marching cubes, with
+optional smoothing, decimation and normal computation. Input formats
+include VTK, BGEO, PLY, XYZ and JSON; output formats include VTK, PLY
+and OBJ. The reconstruction is parallelized with rayon.

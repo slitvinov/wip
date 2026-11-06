@@ -1,0 +1,5 @@
+wip/splashsurf: Import splashsurf-0.14.1
+
+splashsurf reconstructs triangle surface meshes from SPH particle data
+(VTK, BGEO, PLY, XYZ, JSON input; VTK, PLY, OBJ output).  Built from
+the crates.io crate, which ships its own Cargo.lock.
