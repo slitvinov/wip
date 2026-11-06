@@ -1,0 +1,10 @@
+wip/box64: Import box64-0.4.4
+
+Box64 runs x86_64 Linux programs on ARM64 and RISC-V Linux, with
+dynamic recompilation and native wrapping of common libraries.
+Linux-only; built with the ARM64 dynarec as in the RenderMan VM.
+Prebuilt x86_64 libraries and /etc files are not installed; the rc
+file is read from PKG_SYSCONFDIR.
+
+Tested with a pkgsrc bootstrap in a Fedora 43 aarch64 VM: x86_64
+busybox and an AVX2/FMA test program run correctly.

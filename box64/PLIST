@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/box64
+bin/box64-configurator
+share/applications/box64-configurator.desktop
+share/examples/box64/box64.box64rc
+share/examples/box64/box64.conf

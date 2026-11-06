@@ -1,0 +1,11 @@
+Box64 is a Linux userspace x86_64 emulator for non-x86 64-bit Linux
+hosts (packaged here for ARM64 and RISC-V).  It runs unmodified x86_64
+Linux programs and translates calls to many common system libraries
+(libc, libm, libGL, SDL, Vulkan, X11, GTK, ...) to the native host
+libraries, which gives near-native speed for those parts.  A dynamic
+recompiler (dynarec) translates x86_64 code into native code.
+
+The package also installs box64-configurator, a GTK3 editor for
+box64rc files, which needs Python 3 with PyGObject at run time.
+An example binfmt_misc configuration is installed in
+share/examples/box64.
