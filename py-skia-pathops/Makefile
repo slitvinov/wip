@@ -29,7 +29,7 @@ SUBST_STAGE.gn=		pre-configure
 SUBST_MESSAGE.gn=	Setting the path to gn.
 SUBST_FILES.gn=		setup.py
 SUBST_VARS.gn=		GN
-GN=			${PREFIX}/bin/gn
+GN=			${TOOLBASE}/bin/gn
 
 
 .include "../../mk/bsd.prefs.mk"
