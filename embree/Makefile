@@ -1,10 +1,10 @@
 # $NetBSD$
 
 DISTNAME=	embree-4.4.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=RenderKit/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.embree.org/
