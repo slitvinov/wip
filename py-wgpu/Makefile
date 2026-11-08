@@ -18,7 +18,6 @@ DEPENDS+=	wgpu-native-29.0.1.1{,nb*}:../../wip/wgpu-native
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # requires-python >= 3.11
 
 .include "../../mk/bsd.prefs.mk"
 

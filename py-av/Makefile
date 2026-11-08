@@ -19,7 +19,7 @@ USE_TOOLS+=	pkg-config
 
 PY_RENAME_BINARIES=	pyav
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # requires-python >= 3.12
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # requires-python >= 3.12
 
 # PyAV 19 needs FFmpeg 8 (it uses AV_FRAME_DATA_EXIF and other FFmpeg 8
 # API), so it cannot use ffmpeg7.

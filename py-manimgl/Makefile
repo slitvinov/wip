@@ -75,7 +75,6 @@ WHEEL_NAME=	manimgl-1.7.2
 
 PY_RENAME_BINARIES=	manimgl manim-render
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # py-wgpu
 
 .include "../../lang/python/pyversion.mk"
 # audioop (used by pydub) left the standard library in Python 3.13.

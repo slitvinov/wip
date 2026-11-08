@@ -23,7 +23,7 @@ USE_LANGUAGES=	# none
 
 PY_RENAME_BINARIES=	trimesh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-numpy
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

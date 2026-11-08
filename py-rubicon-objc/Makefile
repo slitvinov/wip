@@ -18,7 +18,6 @@ USE_LANGUAGES=	# none
 # Talks to the Objective-C runtime through ctypes.
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 # requires-python >= 3.11
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

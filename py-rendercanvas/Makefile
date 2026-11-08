@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-glfw>=1.9:../../wip/py-glfw
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-numpy
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
