@@ -7,15 +7,14 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 # Dependencies that MLX would fetch with FetchContent at configure time,
 # at the versions pinned by its CMake files.  metal-cpp provides the C++
-# Metal API headers; gguf-tools reads GGUF model files.
+# Metal API headers; gguf-tools reads GGUF model files.  nlohmann/json
+# comes from textproc/nlohmann-json instead (see post-extract).
 METAL_CPP_DISTFILE=		metal-cpp_26.zip
-JSON_DISTFILE=			nlohmann-json-3.11.3.tar.xz
 GGUF_REV=			8fa6eb65236618e28fd7710a0fba565f7faa1848
 GGUF_DISTFILE=			gguf-tools-${GGUF_REV}.tar.gz
 DISTFILES=			${DEFAULT_DISTFILES} ${METAL_CPP_DISTFILE}
-DISTFILES+=			${JSON_DISTFILE} ${GGUF_DISTFILE}
+DISTFILES+=			${GGUF_DISTFILE}
 SITES.${METAL_CPP_DISTFILE}=	https://developer.apple.com/metal/cpp/files/
-SITES.${JSON_DISTFILE}=		-https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz
 SITES.${GGUF_DISTFILE}=		-https://github.com/antirez/gguf-tools/archive/${GGUF_REV}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -61,6 +60,15 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR=${PREFIX}/lib
 
 LDFLAGS.Darwin+=	-Wl,-headerpad_max_install_names
 
+# MLX and JACCL include <json.hpp> from FetchContent's
+# json/single_include/nlohmann; point that at the pkgsrc headers (the
+# directory has no CMakeLists.txt, so FetchContent only records it).
+post-extract:
+	${MKDIR} ${WRKDIR}/json/single_include
+	${LN} -s ${BUILDLINK_DIR}/include/nlohmann \
+		${WRKDIR}/json/single_include/nlohmann
+
 .include "../../devel/cmake/build.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
