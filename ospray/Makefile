@@ -35,7 +35,6 @@ CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_MODULE_CPU=ON
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_MODULE_GPU=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_MODULE_MULTIDEVICE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_MODULE_DENOISER=ON
-CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_MODULE_MPI=ON
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_MODULE_BILINEAR_PATCH=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_ENABLE_VOLUMES=ON
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_ENABLE_APPS=ON
@@ -47,9 +46,6 @@ CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_APPS_ENABLE_GLM=OFF
 CMAKE_CONFIGURE_ARGS+=	-DOSPRAY_INSTALL_DEPENDENCIES=OFF
 # Newer install_name_tool fails to delete the build RPATH on Darwin.
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SKIP_BUILD_RPATH=ON
-# Point FindMPI at the pkgsrc Open MPI wrappers.
-CMAKE_CONFIGURE_ARGS+=	-DMPI_C_COMPILER=${BUILDLINK_PREFIX.openmpi}/bin/mpicc
-CMAKE_CONFIGURE_ARGS+=	-DMPI_CXX_COMPILER=${BUILDLINK_PREFIX.openmpi}/bin/mpicxx
 
 .include "../../mk/bsd.prefs.mk"
 .if ${MACHINE_ARCH} == "aarch64"
@@ -65,14 +61,12 @@ post-patch:
 	${PATCH} -p1 -s < ${WRKSRC}/apps/common/external/imgui/imgui.patch
 
 CMAKE_GENERATOR=	ninja
+.include "options.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../wip/openvkl/buildlink3.mk"
 .include "../../wip/embree/buildlink3.mk"
 .include "../../wip/rkcommon/buildlink3.mk"
 .include "../../wip/oidn/buildlink3.mk"
-# MPI distributed rendering module.
-.include "../../parallel/openmpi/buildlink3.mk"
-.include "../../devel/snappy/buildlink3.mk"
 .include "../../graphics/glfw/buildlink3.mk"
 # ospTestSuite and ospBenchmark (static libraries, build only).
 .include "../../devel/googletest/buildlink3.mk"
