@@ -15,8 +15,6 @@ LICENSE=	tost-1.0
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
 
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DPXR_BUILD_TESTS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPXR_BUILD_EXAMPLES=OFF
@@ -26,9 +24,6 @@ CMAKE_CONFIGURE_ARGS+=	-DPXR_BUILD_IMAGING=ON
 CMAKE_CONFIGURE_ARGS+=	-DPXR_BUILD_USD_IMAGING=ON
 # usdview needs PySide6 and PyOpenGL.
 CMAKE_CONFIGURE_ARGS+=	-DPXR_BUILD_USDVIEW=OFF
-CMAKE_CONFIGURE_ARGS+=	-DPXR_ENABLE_PYTHON_SUPPORT=ON
-CMAKE_CONFIGURE_ARGS+=	-DPXR_PYTHON_INSTALL_DIR=${PYSITELIB}
-CMAKE_CONFIGURE_ARGS+=	-DPython3_EXECUTABLE=${PYTHONBIN}
 CMAKE_CONFIGURE_ARGS+=	-DPXR_ENABLE_MATERIALX_SUPPORT=ON
 CMAKE_CONFIGURE_ARGS+=	-DPXR_MATERIALX_STDLIB_INSTALL_DIR=${PREFIX}/share/MaterialX/libraries
 CMAKE_CONFIGURE_ARGS+=	-DPXR_ENABLE_OPENVDB_SUPPORT=ON
@@ -44,6 +39,7 @@ CMAKE_CONFIGURE_ARGS+=	-DPXR_ENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPXR_ENABLE_COMPILER_CACHE=OFF
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .if ${OPSYS} == "Darwin"
 # Hydra Storm renders through Metal (HgiMetal compiles its shaders at
@@ -54,10 +50,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR=${PREFIX}/lib
 LDFLAGS.Darwin+=	-Wl,-headerpad_max_install_names
 .endif
 
-PY_PATCHPLIST=		yes
-REPLACE_PYTHON+=	pxr/usd/bin/*/*.py
-REPLACE_PYTHON+=	pxr/usd/usd/usdGenSchema.py
-
 # The CMake package files record buildlink paths of dependencies.
 SUBST_CLASSES+=		bl
 SUBST_STAGE.bl=		post-build
@@ -66,13 +58,7 @@ SUBST_FILES.bl=		${CMAKE_BUILD_DIR}/pxrConfig.cmake
 SUBST_FILES.bl+=	${CMAKE_BUILD_DIR}/pxr/CMakeFiles/Export/*/pxrTargets.cmake
 SUBST_SED.bl=		-e 's,${BUILDLINK_DIR},${PREFIX},g'
 
-# USD installs legacy (non-__pycache__) .pyc files next to the sources.
-post-install:
-	${FIND} ${DESTDIR}${PREFIX}/${PYSITELIB}/pxr -name '*.pyc' -delete
-
 .include "../../devel/cmake/build.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../wip/opensubdiv/buildlink3.mk"
 .include "../../wip/materialx/buildlink3.mk"
