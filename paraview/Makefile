@@ -20,25 +20,19 @@ USE_TOOLS+=		pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_BUILD_TESTING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_VERSIONED_INSTALL=ON
 # Fortran is only used by the Catalyst Fortran adaptor examples.
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_USE_FORTRAN=OFF
-CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_USE_PYTHON=ON
-CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_USE_QT=ON
-CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_QT_VERSION=6
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_USE_QTWEBENGINE=OFF
-CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_USE_MPI=ON
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_USE_VISKORES=ON
 # TBB is the SMP backend of VTK and the host backend of Viskores.
 CMAKE_CONFIGURE_ARGS+=	-DVTK_SMP_IMPLEMENTATION_TYPE=TBB
 CMAKE_CONFIGURE_ARGS+=	-DVTK_SMP_ENABLE_TBB=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_SMP_ENABLE_OPENMP=OFF
-# OSPRay ray tracing; VisRTX needs CUDA/OptiX (NVIDIA only).
-CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_ENABLE_RAYTRACING=ON
-CMAKE_CONFIGURE_ARGS+=	-DVTK_ENABLE_OSPRAY=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_ENABLE_VISRTX=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_ENABLE_FFMPEG=ON
 CMAKE_CONFIGURE_ARGS+=	-DPARAVIEW_ENABLE_XDMF2=ON
@@ -70,14 +64,11 @@ CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_${l}_INCLUDE_DIR=${BUILDLINK_DIR}/include/ffmpeg
 CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_${l}_LIBRARY=${PV_FFMPEG_LIBDIR}/lib${l}${PV_SHLIB_EXT}
 .endfor
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-
-PY_PATCHPLIST=	yes
-
 .if ${OPSYS} == "Darwin"
 # Avoid "install_name_tool -delete_rpath" failures on install.
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SKIP_BUILD_RPATH=ON
 LDFLAGS.Darwin+=	-Wl,-headerpad_max_install_names
+.  if !empty(PKG_OPTIONS:Mqt)
 # The GUI is installed as ${PREFIX}/Applications/paraview.app;
 # provide a launcher in bin.
 INSTALLATION_DIRS+=	Applications bin
@@ -87,6 +78,7 @@ post-install:
 	    "${PREFIX}/Applications/paraview.app/Contents/MacOS/paraview" \
 	    > ${DESTDIR}${PREFIX}/bin/paraview
 	${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/bin/paraview
+.  endif
 .endif
 
 .include "../../devel/cmake/build.mk"
@@ -102,8 +94,6 @@ PRINT_PLIST_AWK+=	{gsub(/${PV_VER}/, "$${PV_VER}");}
 
 PLIST_SUBST+=	PV_VER=${PV_VER}
 
-.include "../../lang/python/extension.mk"
-
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
@@ -112,20 +102,13 @@ PLIST_SUBST+=	PV_VER=${PV_VER}
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/ospray/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif
-.include "../../x11/qt6-qtbase/buildlink3.mk"
-.include "../../devel/qt6-qt5compat/buildlink3.mk"
-.include "../../devel/qt6-qttools/buildlink3.mk"
-.include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
 @comment $NetBSD$
-Applications/paraview.app/Contents/Info.plist
-Applications/paraview.app/Contents/MacOS/paraview
-Applications/paraview.app/Contents/Resources/paraview.conf
-Applications/paraview.app/Contents/Resources/pvIcon.icns
+${PLIST.qt}Applications/paraview.app/Contents/Info.plist
+${PLIST.qt}Applications/paraview.app/Contents/MacOS/paraview
+${PLIST.qt}Applications/paraview.app/Contents/Resources/paraview.conf
+${PLIST.qt}Applications/paraview.app/Contents/Resources/pvIcon.icns
