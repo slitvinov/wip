@@ -17,9 +17,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 # Plain Unix layout (bin/f3d, lib/, share/f3d) instead of an app bundle.
 CMAKE_CONFIGURE_ARGS+=	-DF3D_MACOS_BUNDLE=OFF
-CMAKE_CONFIGURE_ARGS+=	-DF3D_BINDINGS_PYTHON=ON
-CMAKE_CONFIGURE_ARGS+=	-Dpybind11_DIR=${BUILDLINK_PREFIX.py-pybind11}/${PYSITELIB}/pybind11/share/cmake/pybind11
-CMAKE_CONFIGURE_ARGS+=	-DF3D_BINDINGS_PYTHON_GENERATE_STUBS=OFF
 CMAKE_CONFIGURE_ARGS+=	-DF3D_LINUX_GENERATE_MAN=OFF
 CMAKE_CONFIGURE_ARGS+=	-DF3D_MODULE_EXR=ON
 CMAKE_CONFIGURE_ARGS+=	-DF3D_MODULE_WEBP=ON
@@ -41,11 +38,8 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_NAME_DIR=${PREFIX}/lib
 LDFLAGS.Darwin+=	-Wl,-headerpad_max_install_names
 .endif
 
-PY_PATCHPLIST=	yes
-
+.include "options.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../lang/python/extension.mk"
-.include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../graphics/vtk/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"

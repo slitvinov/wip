@@ -53,8 +53,8 @@ lib/libf3d.dylib
 lib/libvtkext.dylib
 lib/libvtkextUSD.a
 lib/pkgconfig/f3d.pc
-${PYSITELIB}/f3d/__init__.py
-${PYSITELIB}/f3d/pyf3d.so
+${PLIST.python}${PYSITELIB}/f3d/__init__.py
+${PLIST.python}${PYSITELIB}/f3d/pyf3d.so
 lib/usd/f3d/resources/plugInfo.json
 share/doc/F3D/LICENSE.md
 share/doc/F3D/THIRD_PARTY_LICENSES.md
