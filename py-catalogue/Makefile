@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	catalogue-2.0.1
+DISTNAME=	catalogue-2.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/catalogue/}
@@ -10,7 +10,9 @@ HOMEPAGE=	https://github.com/explosion/catalogue
 COMMENT=	Super lightweight function registries for your library
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=   27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-.include "../../lang/python/egg.mk"
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

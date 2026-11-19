@@ -1,0 +1,4 @@
+wip/py-catalogue: Update to 2.0.10
+
+Build with wheel.mk instead of egg.mk.  Needed by spaCy 3.8
+(wip/py-spacy).
