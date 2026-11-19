@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (smart_open-4.2.0.tar.gz) = 8bcf0038b0b9b9b26932ea33e16b3d7fbc534a0b
-SHA512 (smart_open-4.2.0.tar.gz) = d77051192712b6ca939bb68ef9f2efa391650c637ee19e9ca89f9e77057448adc993c7757a3249eb7bf5cb45f64f6388073aaaf9e60922e899432c0f0b61718b
-Size (smart_open-4.2.0.tar.gz) = 119585 bytes
+BLAKE2s (smart_open-9.0.5.tar.gz) = bcabe9f3b452c6bf139a99b85f8756ed7491383568bb4b5990d1e78cdb2341f4
+SHA512 (smart_open-9.0.5.tar.gz) = a89b13cf854d3291527d8e0483ec53ec76c35d9f279b60482190dc9bd1650ff049170788c3d0c2849430f75e4c4f1df6226b23b2a965ae26e14b443a40ae0f10
+Size (smart_open-9.0.5.tar.gz) = 65444 bytes

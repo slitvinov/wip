@@ -1,0 +1,5 @@
+wip/py-smart-open: Update to 9.0.5
+
+Build with wheel.mk (setuptools_scm), depend on py-wrapt and on
+py-requests for the "http" extra, which weasel uses, and drop the
+TEST_DEPENDS on packages that do not exist.
