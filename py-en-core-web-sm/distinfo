@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (en_core_web_sm-3.8.0.tar.gz) = b9d97a5aab5ca0de15b6406f1a3402edad9bb9e0ddf863310eaa518e74a24fac
+SHA512 (en_core_web_sm-3.8.0.tar.gz) = 384ed9bef70c01091edfd170a6d0734fd9069912def516aba1486c9df6ffab7c46070880e69afbe8864373d5c25c793b54a8e8247d4aca166ef4c5c2e7821e03
+Size (en_core_web_sm-3.8.0.tar.gz) = 12806159 bytes

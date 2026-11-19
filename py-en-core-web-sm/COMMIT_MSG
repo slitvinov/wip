@@ -1,0 +1,6 @@
+wip/py-en-core-web-sm: Import py-en-core-web-sm-3.8.0
+
+spaCy's small English pipeline (tok2vec, tagger, parser, senter, NER,
+attribute ruler, lemmatizer), from the explosion/spacy-models GitHub
+release.  Packaging it avoids "spacy download", which runs pip at run
+time.  Needed by misaki's English G2P (wip/py-misaki).

@@ -1,0 +1,5 @@
+en_core_web_sm is spaCy's small English pipeline, trained on written
+web text (blogs, news, comments), with tok2vec, tagger, parser,
+senter, NER, attribute ruler and lemmatizer components.  It is what
+spacy.load("en_core_web_sm") loads; installing it from pkgsrc avoids
+"spacy download", which runs pip.
