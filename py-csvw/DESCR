@@ -1,0 +1,4 @@
+csvw is a Python library to work with CSV files according to the W3C
+"CSV on the Web" recommendations: read and write CSV with JSON
+metadata describing tables, columns, datatypes and foreign keys,
+validate them, and convert them to JSON, SQLite or Markdown.

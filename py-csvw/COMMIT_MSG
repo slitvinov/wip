@@ -1,0 +1,7 @@
+wip/py-csvw: Import py-csvw-4.2.0
+
+Python implementation of the W3C "CSV on the Web" recommendations.
+csvw asks for rfc3986<2, but the URIReference and normalize_uri API it
+uses is unchanged in www/py-rfc3986 2.0, so depend on that.  The
+scripts get a ${PYVERSSUFFIX} suffix.  Needed by segments
+(wip/py-segments).
