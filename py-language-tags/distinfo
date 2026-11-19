@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (language_tags-1.3.2.tar.gz) = 1c7a90b12dc7a83bfac0ea01ecdd8cf777c4b8530bc1064aa16c79d6fabaa84d
+SHA512 (language_tags-1.3.2.tar.gz) = c7b0f2bf2f1b09d2d1e4624204ab7b2aae004b911ba6d46ac5c6f2fcd7ff6449fe00fe939830f894f60c055eaca352e4a60f341b8c691f94ad0a4c215d8f2697
+Size (language_tags-1.3.2.tar.gz) = 222897 bytes

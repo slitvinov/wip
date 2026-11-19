@@ -1,0 +1,3 @@
+Python version of the language-tags JavaScript project: look up,
+validate and format IETF language tags (BCP 47) and their subtags
+using the IANA Language Subtag Registry.
