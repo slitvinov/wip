@@ -1,0 +1,4 @@
+confection is a lightweight configuration system that lets you build
+arbitrary trees of objects from an INI-style config file with
+variable interpolation and function registries.  It was split out of
+Thinc and is used by spaCy and Thinc.

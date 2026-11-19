@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (confection-1.3.4.tar.gz) = 1f36b3292cae6315a4eaf937d74932c7cb964a7818514f40041c197e5384f0df
+SHA512 (confection-1.3.4.tar.gz) = ea5515e334fe3cab88a1fb4c9ec6f76104e785963c31752afcee582aff4928b99ae4e0f4b059281f27bf2cd86b334554b1a427470e5884e7dc06d67e8289bb4a
+Size (confection-1.3.4.tar.gz) = 55094 bytes

@@ -1,0 +1,4 @@
+wip/py-confection: Import py-confection-1.3.4
+
+Lightweight configuration system (INI-style configs with function
+registries) split out of Thinc.  Needed by Thinc and spaCy.
