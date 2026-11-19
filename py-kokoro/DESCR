@@ -1,0 +1,9 @@
+Kokoro is an open-weight text-to-speech model with 82 million
+parameters that produces 24 kHz speech of a quality comparable to much
+larger models.  This is its PyTorch inference library: KPipeline turns
+text into phonemes with misaki and synthesizes them with a chosen
+voice (American and British English; other languages need extra
+misaki dependencies).
+
+The model weights and voices are downloaded from Hugging Face
+(hexgrad/Kokoro-82M) on first use.

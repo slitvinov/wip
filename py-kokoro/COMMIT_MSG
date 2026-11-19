@@ -1,0 +1,8 @@
+wip/py-kokoro: Import py-kokoro-0.9.4
+
+PyTorch inference library for the Kokoro-82M text-to-speech model.
+The weights and voices are downloaded from Hugging Face
+(hexgrad/Kokoro-82M) on first use.  pyproject.toml says
+requires-python <3.13, but it works with Python 3.13; Python 3.14 is
+excluded by math/py-torch.  KPipeline picks CUDA or the CPU by
+default; pass device="mps" to run on the Apple GPU.

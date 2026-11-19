@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (kokoro-0.9.4.tar.gz) = 0e26bb704598dbcc4968d07ce1461b540634cd0b386ea8fa548bbf44f9f6a7e2
+SHA512 (kokoro-0.9.4.tar.gz) = c38d8d77a9a018a5739b7c693ebe63e09ea7d3812c480f362f79c517f1ed2ba58f479e6805950b4d503eb65275cf89a66aae15816faad606196c00fd4dc4ab1d
+Size (kokoro-0.9.4.tar.gz) = 26215928 bytes
