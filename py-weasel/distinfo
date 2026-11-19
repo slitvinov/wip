@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (weasel-1.0.1.tar.gz) = 6aef0fef4fd675956690172eb963d65abb81ff73bb74177fac016501a49751a8
+SHA512 (weasel-1.0.1.tar.gz) = dee6d539e5f92d74ddd653043d020f57e0e01bc90e4b8e40f184d086008ebfbe858786f275ebb00af0aae0d5270ba1a606183e46e81a4fe05fe64a123ad5c486
+Size (weasel-1.0.1.tar.gz) = 39092 bytes

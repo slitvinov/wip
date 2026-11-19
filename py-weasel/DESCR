@@ -1,0 +1,4 @@
+Weasel manages and shares end-to-end workflows for different use
+cases and domains, and orchestrates training, packaging and serving
+of custom pipelines.  It is the project system behind "spacy project",
+split out of spaCy.

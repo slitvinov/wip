@@ -1,0 +1,4 @@
+wip/py-weasel: Import py-weasel-1.0.1
+
+Workflow system behind "spacy project", split out of spaCy.  The
+script is installed as weasel-${PYVERSSUFFIX}.  Needed by spaCy.
