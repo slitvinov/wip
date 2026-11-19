@@ -1,0 +1,2 @@
+dlinfo finds the path of a shared library that has been loaded with
+ctypes, using dlinfo(3) with glibc and dyld on macOS.

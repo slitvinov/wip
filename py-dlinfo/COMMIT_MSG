@@ -1,0 +1,4 @@
+wip/py-dlinfo: Import py-dlinfo-2.0.0
+
+Finds the path of a shared library loaded with ctypes (dlinfo(3) with
+glibc, dyld on macOS).  Needed by phonemizer (wip/py-phonemizer-fork).

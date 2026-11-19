@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (dlinfo-2.0.0.tar.gz) = cf6a49b4bd97923bbb2ac0be7d9b5c298ce1df65a123d6e213bf23154e838ad1
+SHA512 (dlinfo-2.0.0.tar.gz) = 8203afd397fff636f64d584c797bae95a47267bc694ae1dc4b56caf4e701a47d44f3aa0931a58f425721f38a9e6f21e962f97768ac5c29ef13693a9bd8a284c1
+Size (dlinfo-2.0.0.tar.gz) = 12727 bytes
