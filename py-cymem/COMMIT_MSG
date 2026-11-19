@@ -1,0 +1,5 @@
+wip/py-cymem: Update to 2.0.16
+
+Build with wheel.mk and Cython 3.1.  Remove the build-only
+buildlink3.mk: the .pxd files that dependent Cython modules cimport
+come with the installed package, so they use DEPENDS.
