@@ -1,0 +1,4 @@
+wip/py-wasabi: Update to 1.1.3
+
+Take the distfile from PyPI and build with wheel.mk instead of the
+GitHub egg build.  Needed by spaCy 3.8 (wip/py-spacy).

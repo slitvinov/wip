@@ -1,23 +1,18 @@
 # $NetBSD$
 
-
-DISTNAME=	wasabi-v0.8.2
+DISTNAME=	wasabi-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ines/}
-GITHUB_PROJECT=	wasabi
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wasabi/}
 
 MAINTAINER=	lntl@disroot.org
-HOMEPAGE=	https://ines.io
-COMMENT=	A lightweight console printing and formatting toolkit
+HOMEPAGE=	https://github.com/explosion/wasabi
+COMMENT=	Lightweight console printing and formatting toolkit
 LICENSE=	mit
 
-WRKSRC=	${$WRKDIR}/${PKGNAME_NOREV}
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-WRKSRC=		${WRKDIR}/wasabi-0.8.2
 USE_LANGUAGES=	# none
 
-# TODO: Migrate MASTER_SITES to MASTER_SITE_PYPI
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
