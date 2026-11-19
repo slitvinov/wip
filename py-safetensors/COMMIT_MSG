@@ -1,0 +1,6 @@
+wip/py-safetensors: fix the install on Darwin
+
+Link the extension with -headerpad_max_install_names, so that
+lang/rust/cargo.mk can give it an absolute install name; without it
+install_name_tool failed because the larger load commands did not
+fit.  Use ${PYSTABLEABI} in the PLIST.

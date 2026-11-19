@@ -7,7 +7,7 @@ ${PYSITELIB}/safetensors/__init__.py
 ${PYSITELIB}/safetensors/__init__.pyc
 ${PYSITELIB}/safetensors/__init__.pyi
 ${PYSITELIB}/safetensors/__init__.pyo
-${PYSITELIB}/safetensors/_safetensors_rust.abi3.so
+${PYSITELIB}/safetensors/_safetensors_rust.${PYSTABLEABI}.so
 ${PYSITELIB}/safetensors/flax.py
 ${PYSITELIB}/safetensors/flax.pyc
 ${PYSITELIB}/safetensors/flax.pyo

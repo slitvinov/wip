@@ -19,6 +19,13 @@ USE_LANGUAGES=	c
 
 .include "cargo-depends.mk"
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "Darwin"
+# Leave room for cargo.mk to set an absolute install name on the
+# extension module.
+RUSTFLAGS+=	-C link-arg=-Wl,-headerpad_max_install_names
+.endif
+
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
