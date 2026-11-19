@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (phonemizer_fork-3.3.2.tar.gz) = 55e1c6e10fe94f858f6722641a11ebf3c05d24f88e9ad2400881cff49ca584d0
+SHA512 (phonemizer_fork-3.3.2.tar.gz) = c9ab4be423d83878f63ef0d2e2dbe1ceb8fa1d8497b4c87a387bfd6698b9308d77b945d22d9bda2159e6d0e5551a6f58318c61cf35bdf0307e6cd0c11f5c5765
+Size (phonemizer_fork-3.3.2.tar.gz) = 300989 bytes

@@ -1,0 +1,4 @@
+phonemizer converts text to phones (phonemes) for many languages,
+using the eSpeak NG, eSpeak MBROLA, Festival or segments backends.
+This is the phonemizer-fork release used by the Kokoro TTS stack
+(misaki), which adds a few fixes on top of phonemizer 3.3.

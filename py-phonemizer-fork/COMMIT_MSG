@@ -1,0 +1,7 @@
+wip/py-phonemizer-fork: Import py-phonemizer-fork-3.3.2
+
+Text to phones converter (eSpeak NG, MBROLA, Festival and segments
+backends); this fork is the one the Kokoro TTS stack uses.  Load
+pkgsrc's libespeak-ng by absolute path when PHONEMIZER_ESPEAK_LIBRARY
+is not set, since ctypes.util.find_library does not search ${PREFIX}
+on Darwin.  Needed by misaki (wip/py-misaki).
