@@ -1,0 +1,4 @@
+segments implements Unicode Standard tokenization routines and
+orthography profile segmentation: it splits strings into graphemes
+or into the segments defined by an orthography profile, and can
+transliterate them, for example to IPA.

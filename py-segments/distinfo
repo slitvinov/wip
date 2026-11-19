@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (segments-2.4.0.tar.gz) = f1805f71e88f7a1352b025751c607e3b5c9fbf8adcace87493ddbbb7b953f921
+SHA512 (segments-2.4.0.tar.gz) = 36e64d51c8b2ecf10638b2d830450e36b88a7bcb9ed73c9fd82b18ea73da0b0faeba89713cab7f45744a9626a0135c76094e36aef72d777740052594c7789901
+Size (segments-2.4.0.tar.gz) = 18662 bytes

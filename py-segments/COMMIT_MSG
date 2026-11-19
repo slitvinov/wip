@@ -1,0 +1,4 @@
+wip/py-segments: Import py-segments-2.4.0
+
+Unicode Standard tokenization routines and orthography profile
+segmentation.  Needed by phonemizer (wip/py-phonemizer-fork).
