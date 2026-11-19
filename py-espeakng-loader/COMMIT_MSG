@@ -1,0 +1,7 @@
+wip/py-espeakng-loader: Import py-espeakng-loader-0.2.4
+
+Tells Python code where the eSpeak NG library and espeak-ng-data are.
+The PyPI wheels bundle their own espeak-ng build and there is no
+sdist, so build from the GitHub commit that bumped the version to
+0.2.4 (plus the LICENSE file) and point the paths at audio/espeak-ng.
+Needed by misaki (wip/py-misaki).

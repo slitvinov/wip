@@ -1,0 +1,8 @@
+@comment $NetBSD$
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/espeakng_loader/__init__.py
+${PYSITELIB}/espeakng_loader/__init__.pyc
+${PYSITELIB}/espeakng_loader/__init__.pyo

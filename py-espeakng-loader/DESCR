@@ -1,0 +1,5 @@
+espeakng-loader gives Python code the location of the eSpeak NG shared
+library and its espeak-ng-data directory, so that packages such as
+phonemizer and misaki can load them through ctypes.  This package
+uses the espeak-ng from pkgsrc instead of the copy bundled in the
+PyPI wheels.
