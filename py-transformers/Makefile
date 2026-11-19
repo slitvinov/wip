@@ -118,7 +118,7 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.27:../../misc/py-tqdm
 
 USE_LANGUAGES=	c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310 311 # py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	311 # py-numpy
 
 SCRIPTS=	transformers
 
