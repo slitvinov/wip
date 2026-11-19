@@ -1,0 +1,4 @@
+wip/py-spacy-loggers: Import py-spacy-loggers-1.0.5
+
+Training loggers for spaCy (console, Weights & Biases, MLflow,
+ClearML).  Needed by spaCy.

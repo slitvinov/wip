@@ -1,0 +1,4 @@
+Logging utilities for spaCy training: loggers that report training
+progress to Weights & Biases, MLflow, ClearML, or a console with a
+progress bar.  The services' client libraries are only needed when
+the corresponding logger is used.
