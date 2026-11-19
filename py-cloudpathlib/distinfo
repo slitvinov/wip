@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (cloudpathlib-0.26.0.tar.gz) = b853e1a19897f730cda00d7017c7ce599dd007130485b0d2e92fd638fa9141dd
+SHA512 (cloudpathlib-0.26.0.tar.gz) = 67290dc1641da64bad44e2b667fd0252cd344187cc690c56153d7c360e5d3be4e0ce6b845d9bdc1f8a06d50de91603c9fa6387b93cf1063ea7a8c1fe9d1381e1
+Size (cloudpathlib-0.26.0.tar.gz) = 56756 bytes

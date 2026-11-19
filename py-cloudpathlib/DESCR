@@ -1,0 +1,4 @@
+cloudpathlib provides pathlib.Path-style classes for files in cloud
+storage (Amazon S3, Google Cloud Storage, Azure Blob Storage), with a
+local cache.  The client library of each service is needed only when
+that service is used.

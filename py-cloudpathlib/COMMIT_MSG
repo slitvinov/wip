@@ -1,0 +1,5 @@
+wip/py-cloudpathlib: Import py-cloudpathlib-0.26.0
+
+pathlib.Path-style classes for S3, Google Cloud Storage and Azure Blob
+Storage; the service client libraries are optional.  Needed by weasel
+(wip/py-weasel).
