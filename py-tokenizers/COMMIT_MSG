@@ -1,0 +1,8 @@
+wip/py-tokenizers: fix COMMENT, CATEGORIES and dependencies
+
+Replace the url2pkg TODO placeholders, make py-maturin a tool
+dependency instead of a run-time one, and depend on
+py-huggingface-hub, which tokenizers imports.
+
+Link with -headerpad_max_install_names on Darwin, as for
+wip/py-safetensors, and use ${PYSTABLEABI} in the PLIST.

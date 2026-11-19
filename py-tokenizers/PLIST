@@ -47,7 +47,7 @@ ${PYSITELIB}/tokenizers/processors/__init__.py
 ${PYSITELIB}/tokenizers/processors/__init__.pyc
 ${PYSITELIB}/tokenizers/processors/__init__.pyi
 ${PYSITELIB}/tokenizers/processors/__init__.pyo
-${PYSITELIB}/tokenizers/tokenizers.abi3.so
+${PYSITELIB}/tokenizers/tokenizers.${PYSTABLEABI}.so
 ${PYSITELIB}/tokenizers/tools/__init__.py
 ${PYSITELIB}/tokenizers/tools/__init__.pyc
 ${PYSITELIB}/tokenizers/tools/__init__.pyo
