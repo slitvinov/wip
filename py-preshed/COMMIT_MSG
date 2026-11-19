@@ -1,0 +1,5 @@
+wip/py-preshed: Update to 3.0.15
+
+Take the distfile from PyPI and build with wheel.mk and Cython 3.1.
+Depend on py-cymem and py-murmurhash, whose .pxd files it cimports,
+and remove the build-only buildlink3.mk.

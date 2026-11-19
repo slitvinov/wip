@@ -1,23 +1,21 @@
 # $NetBSD$
 
-
-DISTNAME=	preshed-v2.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/v//1}
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=explosion/}
-GITHUB_PROJECT=	preshed
+DISTNAME=	preshed-3.0.15
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/preshed/}
 
 MAINTAINER=	lntl@disroot.org
-HOMEPAGE=	https://github.com/explosion/preshed/
+HOMEPAGE=	https://github.com/explosion/preshed
 COMMENT=	Cython hash table mapping
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.1:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-cymem>=2.0.2:../../wip/py-cymem
+DEPENDS+=	${PYPKGPREFIX}-murmurhash>=0.28.0:../../wip/py-murmurhash
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/v//1}
 USE_LANGUAGES=	c c++
 
-
-#.include "../../wip/python/distutils.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
