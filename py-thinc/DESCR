@@ -1,0 +1,4 @@
+Thinc is a lightweight deep learning library with a functional,
+type-checked API for composing models.  It can wrap layers from
+PyTorch, TensorFlow and MXNet, and comes with a configuration system
+(confection).  It is the machine learning library behind spaCy.

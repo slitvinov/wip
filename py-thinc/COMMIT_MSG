@@ -1,0 +1,6 @@
+wip/py-thinc: Update to 8.3.14
+
+Take the distfile from PyPI, build with wheel.mk, fix PKGNAME (it
+lacked ${PYPKGPREFIX}), and list the runtime dependencies (blis,
+catalogue, confection, cymem, murmurhash, preshed, pydantic, srsly,
+wasabi).  8.3.x is the series spaCy 3.8 requires.
