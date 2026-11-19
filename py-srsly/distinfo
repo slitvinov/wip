@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (srsly-2.4.0.tar.gz) = 8a4f104389fec1a9941c75f903646852e259c4c7
-SHA512 (srsly-2.4.0.tar.gz) = 8c6e261a9b3de794c0c6142127c7e16dea708511cd9a693d9b07c5dfef0c2d47a7a18732fc7b378aa95dcd51f4092109b75fa77e3481b6b570b92b7d1340ee0e
-Size (srsly-2.4.0.tar.gz) = 314670 bytes
+BLAKE2s (srsly-2.5.6.tar.gz) = 8a9ab44eb51ed0ec218d2efdbcd559e4b30c1590f547a48f42fd447b523a4115
+SHA512 (srsly-2.5.6.tar.gz) = 85073e8729b7a85c7cfc8aade2c7689951df28d40ee30049bbea5001bfdcefad8d69ab3587d73ad412ba0d209197f6494679cd30724abc950d1381dc34b8d798
+Size (srsly-2.5.6.tar.gz) = 513533 bytes

@@ -1,0 +1,6 @@
+wip/py-srsly: Update to 2.5.6
+
+Build with wheel.mk, require Cython 3.1, and drop the test-only
+packages (mock, pytest, pytest-timeout) from DEPENDS.  srsly 2.5 still
+vendors ujson, msgpack, cloudpickle and ruamel.yaml; 3.x would need
+them as separate packages and spaCy 3.8 wants srsly<3.
