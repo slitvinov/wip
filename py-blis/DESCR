@@ -1,0 +1,5 @@
+Cython wrapper around the BLIS linear algebra library (BLAS-like
+Library Instantiation Software).  It bundles its own copy of BLIS,
+built for the host architecture, so it provides fast single-threaded
+matrix multiplication without an external BLAS.  Used by Thinc and
+spaCy.

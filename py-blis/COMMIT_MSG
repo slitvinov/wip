@@ -1,0 +1,6 @@
+wip/py-blis: Import py-blis-1.3.4
+
+Cython wrapper around a bundled copy of BLIS (BLAS-like Library
+Instantiation Software) for fast single-threaded matrix
+multiplication.  The kernels are built with ${CC} (the "generic"
+configuration on Darwin/aarch64).  Needed by Thinc (wip/py-thinc).
