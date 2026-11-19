@@ -1,0 +1,4 @@
+This package includes outdated registered functions for spaCy v3.x,
+for example model architectures, pipeline components and utilities.
+It is installed automatically as a dependency of spaCy, and allows
+older configs and trained pipelines to keep working.

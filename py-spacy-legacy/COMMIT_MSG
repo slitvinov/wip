@@ -1,0 +1,4 @@
+wip/py-spacy-legacy: Import py-spacy-legacy-3.0.12
+
+Legacy registered functions (architectures, layers) that keep older
+spaCy v3 configs and pipelines working.  Needed by spaCy.

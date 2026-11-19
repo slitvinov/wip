@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (spacy-legacy-3.0.12.tar.gz) = e3a5f53d5c1ef1071203628a4d13d825fb19685a1f9ae6af8dd2c02eefdb5890
+SHA512 (spacy-legacy-3.0.12.tar.gz) = 50f1beebf61d655afa5bf8e5f0cd69e1b2f0575a1957bf1cb9013fcfc59c711a3f8e7506a18bbbb0ae80d72741b0cb814f2dc1b6859fe35c5b7c4607904756ec
+Size (spacy-legacy-3.0.12.tar.gz) = 23806 bytes
