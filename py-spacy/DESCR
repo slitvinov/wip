@@ -1,0 +1,7 @@
+spaCy is a library for advanced natural language processing in Python
+and Cython.  It comes with pretrained pipelines and supports
+tokenization and training for 70+ languages, with components for
+tagging, parsing, named entity recognition, text classification and
+more, and multi-task learning with pretrained transformers.
+
+Trained pipelines such as en_core_web_sm are separate packages.

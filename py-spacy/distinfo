@@ -1,5 +1,5 @@
 $NetBSD$
 
-RMD160 (spaCy-v3.0.5.tar.gz) = 1f7cd575fd739a3cfa30a0240d97dc11965c802b
-SHA512 (spaCy-v3.0.5.tar.gz) = 0224d06b739d8499e187781d9a32bece732ff33e7ba070c5c02da72a1ccbcbd42eda3470c564ce6651e672e3c3d00442f1e0311c0e6a9ed80081a84259faaeae
-Size (spaCy-v3.0.5.tar.gz) = 8775616 bytes
+BLAKE2s (spacy-3.8.18.tar.gz) = 68df6fb44fc35d924cd78110d7ed2143b61463b27cc56070419468e53b4f1c0c
+SHA512 (spacy-3.8.18.tar.gz) = 58c254dee7e2df5c74db1fdbe4ae2c38f8944f3e4fb69c1621dd07a52fa71cde37e53976de6c8f9af82eb947413efd347f82aad5757e1bef0f5c2464946ea24e
+Size (spacy-3.8.18.tar.gz) = 1331024 bytes

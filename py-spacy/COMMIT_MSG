@@ -1,0 +1,6 @@
+wip/py-spacy: Update to 3.8.18
+
+Take the sdist from PyPI, build with wheel.mk and Cython 3, list the
+runtime dependencies, and add a DESCR.  The script is installed as
+spacy-${PYVERSSUFFIX}.  Trained pipelines are separate packages
+(wip/py-en-core-web-sm).  Needed by misaki (wip/py-misaki).
