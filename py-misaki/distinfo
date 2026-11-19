@@ -1,0 +1,5 @@
+$NetBSD$
+
+BLAKE2s (misaki-0.9.4.tar.gz) = 47aaf423196d0f0ad223f07efb74cfa2ff977f1e453fcaec4d13fe6f5d155dfe
+SHA512 (misaki-0.9.4.tar.gz) = 99e368df0fbaccb03c6dd969d1a6f17102c53ef3a10a7318e5dee80fb9658910aa3f32ea07236bf9f7d94dd8c77ab498c8bc64f9d1b6fcd0a71b48937d129036
+Size (misaki-0.9.4.tar.gz) = 3756765 bytes

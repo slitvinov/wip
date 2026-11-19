@@ -1,0 +1,7 @@
+Misaki is the G2P (grapheme to phoneme) engine of the Kokoro TTS
+models.  For English it combines gold and silver pronunciation
+dictionaries with spaCy part-of-speech tagging, and falls back to
+eSpeak NG for out-of-dictionary words.
+
+This package includes the English support; Japanese, Korean, Chinese,
+Vietnamese and Hebrew need further dependencies.

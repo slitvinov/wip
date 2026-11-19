@@ -1,0 +1,8 @@
+wip/py-misaki: Import py-misaki-0.9.4
+
+G2P (grapheme to phoneme) engine of the Kokoro TTS models, with the
+dependencies of its "en" extra (espeakng-loader, num2words,
+phonemizer-fork, spaCy) plus the en_core_web_sm pipeline that English
+G2P loads.  spacy-curated-transformers, needed only for the
+transformer-based G2P (trf=True), is left out.  Needed by Kokoro
+(wip/py-kokoro).
