@@ -1,1 +1,2 @@
-Cython bindings for MurmurHash2
+Cython bindings for MurmurHash2 and MurmurHash3, used by spaCy and
+Thinc for fast hashing of strings and features.

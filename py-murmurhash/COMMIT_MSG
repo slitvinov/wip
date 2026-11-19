@@ -1,0 +1,4 @@
+wip/py-murmurhash: Update to 1.0.16
+
+Take the distfile from PyPI and build with wheel.mk and Cython 3.1;
+add a real COMMENT and DESCR.

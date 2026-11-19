@@ -1,21 +1,19 @@
 # $NetBSD$
 
-DISTNAME=	murmurhash-v1.0.1
+DISTNAME=	murmurhash-1.0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=explosion/}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/murmurhash/}
 
 MAINTAINER=	lntl@disroot.org
-HOMEPAGE=	https://github.com/explosion/murmurhash/
-COMMENT=	TODO: Short description of the package
+HOMEPAGE=	https://github.com/explosion/murmurhash
+COMMENT=	Cython bindings for MurmurHash
 LICENSE=	mit
 
-WRKSRC=	${WRKDIR}/${DISTNAME:S/v//1}
-USE_LANGUAGES= c c++
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.1:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
+USE_LANGUAGES=	c c++
 
-# url2pkg-marker (please do not remove this line.)
-.include	"../../lang/python/egg.mk"
-.include	"../../devel/py-cython/buildlink3.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
